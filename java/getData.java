@@ -45,10 +45,13 @@ class getData {
     String line;
     try
     {
-      while((line = d.readLine()) != null)
+      System.out.println("Before while");
+      while(d != null && (line = d.readLine()) != null)
       {
+          System.out.println("in while");
           inBuffer = inBuffer + line;
       }
+      System.out.println("after while");
     }
     catch (IOException ignored) { }
 
