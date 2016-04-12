@@ -10,11 +10,12 @@ echo "<!DOCTYPE html>
         if($_SERVER['REQUEST_METHOD']=="GET"){
           parse_str($_SERVER['QUERY_STRING']);
           if($username == "" || $password == "" || $magicnum < 0){
-            die("There was an error with your input");
-          }
-          for($i = 0; $i<$magicnum;$i++){
-          echo  "<h1>Hello ".username." with a password of  ".$password." !</h1>";
-          }
+            echo"There was an error with your input";
+          }else{
+              for($i = 0; $i<$magicnum;$i++){
+              echo  "<h1>Hello ".username." with a password of  ".$password." !</h1>";
+              }
+            }
         }
 
         if($_SERVER['REQUEST_METHOD']=="POST") {
@@ -23,11 +24,12 @@ echo "<!DOCTYPE html>
           }
           parse_str($string);
           if($username == "" || $password == "" || $magicnum < 0){
-            die("There was an error with your input");
-          }
-          for($j = 0; $j<$magicnum;$j++){
-          echo "<h1>Hello ".$username." with a password of  ".$password." !</h1>";
-          }
+            echo "There was an error with your input";
+          } else {
+              for($j = 0; $j<$magicnum;$j++){
+              echo "<h1>Hello ".$username." with a password of  ".$password." !</h1>";
+              }
+            }
         }
 
       echo "</body>
