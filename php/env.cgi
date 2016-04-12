@@ -10,10 +10,9 @@ echo "<!DOCTYPE html>
       <body style='background-color:$color'>
         <br>
         <h1>Browser Variables</h1>
-
         <table>
         <tr>
-          <td>HTTP_ACCEPT</th>
+          <td>HTTP_ACCEPT</td>
           <td>".$_SERVER['HTTP_ACCEPT']."</td>
         </tr>
         <tr>
@@ -25,7 +24,7 @@ echo "<!DOCTYPE html>
           <td>".$_SERVER['HTTP_ACCEPT_LANGUAGE']."</td>
         </tr>
         <tr>
-          <td>HTTP_CONNECTION</th>
+          <td>HTTP_CONNECTION</td>
           <td>".$_SERVER['HTTP_CONNECTION']."</td>
         </tr>
         <tr>
@@ -41,7 +40,7 @@ echo "<!DOCTYPE html>
           <td>".$_SERVER['HTTP_UPGRADE_INSECURE_REQUESTS']."</td>
         </tr>
         <tr>
-          <td>HTTP_USER_AGENT</th>
+          <td>HTTP_USER_AGENT</td>
           <td>".$_SERVER['HTTP_USER_AGENT']."</td>
         </tr>
         <tr>
@@ -53,7 +52,7 @@ echo "<!DOCTYPE html>
           <td>".$_SERVER['REMOTE_ADDR']."</td>
         </tr>
         <tr>
-          <td>REMOTE_PORT</th>
+          <td>REMOTE_PORT</td>
           <td>".$_SERVER['REMOTE_PORT']."</td>
         </tr>
         <tr>
@@ -85,7 +84,7 @@ echo "<!DOCTYPE html>
 
       <table>
       <tr>
-        <td>argc</th>
+        <td>argc</td>
         <td>".$_SERVER['argc']."</td>
       </tr>
       <tr>
@@ -93,7 +92,7 @@ echo "<!DOCTYPE html>
         <td>".$_SERVER['argv']."</td>
       </tr>
       <tr>
-        <td>CONTEXT_DOCUMENT_ROOT</th>
+        <td>CONTEXT_DOCUMENT_ROOT</td>
         <td>".$_SERVER['CONTEXT_DOCUMENT_ROOT']."</td>
       </tr>
       <tr>
@@ -105,7 +104,7 @@ echo "<!DOCTYPE html>
         <td>".$_SERVER['DOCUMENT_ROOT']."</td>
       </tr>
       <tr>
-        <td>GATEWAY_INTERFACE</th>
+        <td>GATEWAY_INTERFACE</td>
         <td>".$_SERVER['GATEWAY_INTERFACE']."</td>
       </tr>
       <tr>
@@ -125,7 +124,7 @@ echo "<!DOCTYPE html>
         <td>".$_SERVER['SCRIPT_NAME']."</td>
       </tr>
       <tr>
-        <td>SERVER_ADDR</th>
+        <td>SERVER_ADDR</td>
         <td>".$_SERVER['SERVER_ADDR']."</td>
       </tr>
       <tr>
@@ -137,7 +136,7 @@ echo "<!DOCTYPE html>
         <td>".$_SERVER['SERVER_NAME']."</td>
       </tr>
       <tr>
-        <td>SERVER_PORT</th>
+        <td>SERVER_PORT</td>
         <td>".$_SERVER['SERVER_PORT']."</td>
       </tr>
       <tr>
