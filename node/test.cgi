@@ -70,6 +70,7 @@ var postHTML =
   '</body></html>';
 
 console.log(postHTML);
+var express = require('express')
 
 app.use(express.bodyParser());
 
