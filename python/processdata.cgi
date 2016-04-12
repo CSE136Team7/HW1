@@ -13,7 +13,9 @@ def main():
 		magicnum1 = validateInt(form.getvalue('magicnum'))
 	except ValueError:
 		print("<p>There was an error with your input</p>")
-	else:
+	else if (magicnum1 < 1):
+        print("error")
+    else:
 		s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
 		s = s * magicnum1
 		print(s)
@@ -21,6 +23,9 @@ def main():
 def validateString(string):
 	return str(string)
 def validateInt(string):
-	return int(string)
+    m = int(string)
+    if (m < 1)
+        raise Exception(ValueError)
+	return m
 if __name__ == "__main__":
 	main()
