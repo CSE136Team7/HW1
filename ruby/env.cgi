@@ -89,9 +89,10 @@ end
 def printEnvTable()
 	server = ""
 	client = ""
+	filter = ["HTTP", "REQUEST", "QUERY"]
 	for env in getSortedEnvVars() do
 		varString = "<tr><td><b>" + env + "</b></td> <td>" + ENV[env] + "</td></tr>\n"
-		if %w["HTTP" "REQUEST" "QUERY"].any? { |e|  env.include? e}
+		if filter.any? { |e|  env.include? e}
 			client << varString
 	  else
 			server << varString
