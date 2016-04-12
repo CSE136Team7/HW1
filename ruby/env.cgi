@@ -1,6 +1,9 @@
 #!/usr/bin/ruby
 
 puts "Content-type: text/html\n\n"
+
+puts "<h1>Hello World from Ruby @ " + Time.new.inspect + "</h1>"
+
 puts "<html> <h1> Enviroment Variables</h1> </html>"
 
 puts "<form> <br><b>CONTEXT_DOCUMENT_ROOT:</b>"

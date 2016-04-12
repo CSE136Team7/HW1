@@ -28,7 +28,7 @@ var browser = [];
 var sindex = 0;
 var bindex = 0;
 //obj.forEach(function val, idx, array){
-for (var i = 0; i < obj.size(); i++){
+for (var i = 0; i < obj.length; i++){
     if (val.startsWith("HTTP") || val.startsWith("REQUEST") || val.startsWith("REMOTE") || val.startsWith("QUERY") || val.startsWith("I")) {
         browser[bindex] = val;
         bindex++;
@@ -39,22 +39,18 @@ for (var i = 0; i < obj.size(); i++){
     }
 }
 
-//a.forEach(function(val, idx, array) {
-//  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
-//}); 
+a.forEach(function(val, idx, array) {
+  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
+}); 
  
-console.log("<h1>Browser</h1>");
-bindex = 0;
-browser.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '</b>' + browser[bindex] + '<br>');
-    bindex++;
-});
+//console.log("<h1>Browser</h1>");
+//browser.forEach(function(val, idx, array) {
+//    console.log('<b>' + val + ': ' + '</b>' + browser[val] + '<br>');
+//});
  
-console.log("<h1>Server</h1>");
-sindex = 0;
-server.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '<b>' + server[sindex] + '<br>');
-    sindex++;
-});
+//console.log("<h1>Server</h1>");
+//server.forEach(function(val, idx, array) {
+//    console.log('<b>' + val + ': ' + '<b>' + server[val] + '<br>');
+//});
 
 console.log("</body></html>");
