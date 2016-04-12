@@ -28,7 +28,7 @@ var browser = [];
 var sindex = 0;
 var bindex = 0;
 //obj.forEach(function val, idx, array){
-for (var i = 0; i < obj.size(); i++){
+for (var i = 0; i < obj.length; i++){
     if (val.startsWith("HTTP") || val.startsWith("REQUEST") || val.startsWith("REMOTE") || val.startsWith("QUERY") || val.startsWith("I")) {
         browser[bindex] = val;
         bindex++;
