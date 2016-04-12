@@ -99,7 +99,7 @@ def envTables()
     query = 'QUERY'
     
     for e in ENV.keys do
-        if [http, request, remote, query].map { |i| i.include?(e) }
+        if %w{ HTTP REQUEST REMOTE QUERY }.any? { |i| i.include?(e) }
             browser[bindex] = e
             bindex = bindex + 1
         else
