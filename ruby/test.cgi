@@ -10,12 +10,13 @@ username = res[0].split('=')[1]
 password = res[1].split('=')[1]
 magicnum = res[2].split('=')[1]
 
-def printHTML(string, magicnum)
+def printHTML(string)
 	puts "<!doctype html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'><title>HW1 in Python</title>\n</head>"
 	puts "<body >\n"
-	for i in 0..magicnum
-		puts string
-	end
+	#for i in 0..magicnum
+#		puts string
+#	end
+	puts string
 	puts "</body>\n</html>"
 end
 
@@ -25,7 +26,8 @@ puts text1
 
 text1 = text1*magicnum
 puts text1
-	
+
+printHTML(text1)
 
 
 
