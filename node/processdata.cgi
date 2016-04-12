@@ -6,12 +6,23 @@ console.log(header);
 
 var ReadableStream = Object.getPrototypeOf(process.stdin);
 console.log('readable:' + ReadableStream[0]);
-process.stdin.on('readable', function() {
-  var chunk = process.stdin.read();
-  if (chunk !== null) {
-    process.stdout.write(chunk);
-  }
-});
+ReadableStream.read = function(cb) {
+    this.on('data', function(buf) {
+        cb(null, buf);
+    });
+
+    this.on('error', function(err) {
+        cb(err, null);    
+    });
+
+    this.on('end', function() {
+        cb(null, null);
+    });
+
+    this.on('close', function() {
+        cb(new Error("Stream closed"), null);
+    });
+};
 
 process.stdin.on('end', function() {
   process.stdout.write('end');
@@ -42,16 +53,6 @@ process.stdin('data', function(chunk) {
 });
 */
 
-process.stdin.on('readable', function() {
-  var chunk = process.stdin.read();
-  if (chunk !== null) {
-    process.stdout.write(chunk);
-  }
-});
-
-process.stdin.on('end', function() {
-  process.stdout.write('end');
-});
 
 
 
