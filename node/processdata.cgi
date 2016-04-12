@@ -33,7 +33,6 @@ else if(process.env.REQUEST_METHOD==='POST'){
     var magicnumber = res[2].split("=")[1];
     if(!username || !password || magicnumber < 0 || isNaN(magicnumber)){
       console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body ><h1>There was an error with your input</h1></body></html>");
-    }else{
       }else{
         for (var i=0; i<magicnumber; i++) {
           console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body > <h1> Hello " + username + "with a password of " + password+"!<br> </h1></body></html>");
