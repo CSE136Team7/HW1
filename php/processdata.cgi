@@ -9,10 +9,9 @@ echo "<!DOCTYPE html>
       <body>";
         if($_SERVER['REQUEST_METHOD']=="GET"){
           parse_str($_SERVER['QUERY_STRING']);
-          echo $username;
-          # for($i = 0; $i<$_GET["magicnum"];$i++){
-          # echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
-          # }
+          for($i = 0; $i<$magicnum;$i++){
+          echo  "<h1>Hello ".username." with a password of  ".$password." !</h1>";
+          }
         }
 
         # if(strcmp($_SERVER['REQUEST_METHOD'],"POST")==0) {
