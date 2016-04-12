@@ -12,11 +12,18 @@ def main():
                 password = validateString(form.getvalue('password'))
                 magicnum1 = validateInt(form.getvalue('magicnum'))
         except ValueError:
-                print("<p>There was an error with your input</p>")
+                printHTML("<p>There was an error with your input</p>")
         else:
                 s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
                 s = s * magicnum1
-                print(s)
+                printHTML(string)
+
+def printHTML(string):
+	print "Content-Type: text/html;charset=utf-8\n\n"
+	print "<!doctype html>\n<html lang='en'>\n<head>\n<title>HW1 in Python</title>\n</head>"
+	print "<body >\n"
+	print string
+	print "</body>\n</html>"
 
 def validateString(string):
         if not string:

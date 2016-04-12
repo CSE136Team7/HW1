@@ -37,4 +37,7 @@ process.stdin.on('end', function() {
   process.stdout.write('end');
 });
 
+var ReadableStream = Object.getPrototypeOf(process.stdin);
+console.log('readable:' + ReadableStream [0]);
+
 
