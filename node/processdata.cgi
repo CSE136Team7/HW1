@@ -21,10 +21,10 @@ if (process.env.REQUEST_METHOD==='GET') {
 }
 else if(process.env.REQUEST_METHOD==='POST'){
   console.log(process.env.REQUEST_METHOD);
-	var b = '';
+	var data = '';
 	process.stdin.on('data', function(chunk) {
-		b+=chunk;
+		data+=chunk;
 	});
 
-  console.log(b);
+  console.log(data);
 }
