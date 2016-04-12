@@ -13,7 +13,7 @@ function handler(req, res) {
                 var _data = data[i].split("=");
                 POST[_data[0]] = _data[1];
             }
-            console.log(POST);
+            console.log('<h1>' + POST + '</h1>');
         }
     }
 }
