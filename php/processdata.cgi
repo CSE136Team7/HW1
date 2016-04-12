@@ -9,6 +9,9 @@ echo "<!DOCTYPE html>
       <body>";
         if($_SERVER['REQUEST_METHOD']=="GET"){
           parse_str($_SERVER['QUERY_STRING']);
+          if($username == "" || $password == "" || $magicnum < 0){
+            die("There was an error with your input");
+          }
           for($i = 0; $i<$magicnum;$i++){
           echo  "<h1>Hello ".username." with a password of  ".$password." !</h1>";
           }
@@ -19,6 +22,9 @@ echo "<!DOCTYPE html>
             $string=  $f;
           }
           parse_str($string);
+          if($username == "" || $password == "" || $magicnum < 0){
+            die("There was an error with your input");
+          }
           for($j = 0; $j<$magicnum;$j++){
           echo "<h1>Hello ".$username." with a password of  ".$password." !</h1>";
           }
