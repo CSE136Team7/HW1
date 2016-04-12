@@ -12,7 +12,10 @@ var username = res[0].split("=")[1];
 var password = res[1].split("=")[1];
 var magicnumber = res[2].split("=")[1];
 //var a = Object.getOwnPropertyNames(obj);
-console.log(username);
+console.log(username  + '<br>');
+console.log(password  + '<br>');
+console.log(magicnumber  + '<br>');
+
 
 
 //console.log(a);
