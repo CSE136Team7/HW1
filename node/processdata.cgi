@@ -15,11 +15,7 @@ if (process.env.REQUEST_METHOD==='GET') {
 
 
   for (var i=0; i<magicnumber; i++) {
-    if(magicnumber < 0 || isNaN(magicnumber)){
-      console.error("There was an error with your input");
-    }else{
       console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body > <h1> Hello " + username + "with a password of " + password+ "!<br> </h1></body></html>");
-    }
   }
 }
 else if(process.env.REQUEST_METHOD==='POST'){
@@ -34,11 +30,7 @@ else if(process.env.REQUEST_METHOD==='POST'){
     var magicnumber = res[2].split("=")[1];
 
     for (var i=0; i<magicnumber; i++) {
-      if(username || password  || magicnumber < 0 || isNaN(magicnumber)){
-        console.error("There was an error with your input");
-      }else{
       console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body > <h1> Hello " + username + "with a password of " + password+"!<br> </h1></body></html>");
       }
-    }
   });
 }
