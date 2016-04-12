@@ -16,9 +16,7 @@ var body =
 +'<body style= "background-color:'+ backgroundcolor + ';">'
 +'<h2 style="margin-bottom:20px"> Hello World from JavaScript @ ' + d + '</h2>'
 + '<hr>'
-+'<h2 align="center">Environment Variables</h2>'
-+'</body>'
-+'<html>';
++'<h2 align="center">Environment Variables</h2>';
 
 
 console.log(header + body);
@@ -47,15 +45,15 @@ for (int i = 0; i < obj.length; i++){
 console.log("<h1>Browser</h1>");
 bindex = 0;
 browser.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '</b>' + browser[bindex]);
+    console.log('<b>' + val + ': ' + '</b>' + browser[bindex] + '<br>');
     bindex++;
 });
  
 console.log("<h1>Server</h1>");
 sindex = 0;
 server.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '<b>' + server[sindex]);
+    console.log('<b>' + val + ': ' + '<b>' + server[sindex] + '<br>');
     sindex++;
 });
 
-
+console.log("</body></html>");
