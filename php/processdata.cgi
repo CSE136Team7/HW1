@@ -7,6 +7,7 @@ echo "<!DOCTYPE html>
         <title>process data in PHP</title>
       </head>
       <body>";
+      echo "i am here";
         if(count($_GET)>0) {
           echo "i am here";
           for($i = 0; $i<$_GET["magicnum"];$i++){
