@@ -22,17 +22,8 @@ end
 
 
 text1 = "<h1> Hello " + username + " with the password of " + password + "</h1>"
-puts text1
 
-while $i < $magicnum  do
-   puts(text1)
-   $i +=1
-end
+for i in 0...magicnum
+	puts text1
 
-text1 = text1*magicnum
-puts text1
-
-printHTML(text1)
-
-
-
+#printHTML(text1)
