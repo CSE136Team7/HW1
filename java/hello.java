@@ -139,7 +139,7 @@ class hello {
 
 
  
-    System.out.println("<h1>Form Test</h1>");
+    System.out.println("<h1>POST FORM</h1>");
         System.out.println("<hr>");
         System.out.println("<form action='getdata.cgi' method='post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
@@ -149,6 +149,21 @@ class hello {
         System.out.println("<label>Magic Number: <input type='text' name='magicnum' size='2' maxlength='2'></label>");
         System.out.println("<br>");
         System.out.println("<label>Magic Number: <input type='text' name='magicnum2' size='2' maxlength='2'></label>");
+
+
+        System.out.println("<h1>GET FORM</h1>");
+        System.out.println("<hr>");
+        System.out.println("<form action='getdata.cgi' method='get'>");
+        System.out.println("<label>Name: <input type='text' name='username'></label>");
+        System.out.println(" <br>");
+        System.out.println("<label>Password: <input type='password' name='password'></label>");
+        System.out.println("<br>");
+        System.out.println("<label>Magic Number: <input type='text' name='magicnum' size='2' maxlength='2'></label>");
+        System.out.println("<br>");
+        System.out.println("<label>Magic Number: <input type='text' name='magicnum2' size='2' maxlength='2'></label>");
+
+
+
 
         System.out.println("<br>");
         System.out.println("<input type='hidden' name='test' value='it'>");
