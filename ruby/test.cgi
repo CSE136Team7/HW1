@@ -15,6 +15,8 @@ username = res['username']
 password = res['password']
 magicnum = res['magicnum']
 
+puts cgi.keys
+
 def printHTML(string)
 	puts "<!doctype html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'><title>HW1 in Python</title>\n</head>"
 	puts "<body >\n"
