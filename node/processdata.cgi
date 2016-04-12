@@ -19,11 +19,8 @@ if (process.env.REQUEST_METHOD==='GET') {
   for (var i=0; i<magicnumber; i++) {
   console.log(s);
   }
-}
-
-
-if (process.env.REQUEST_METHOD==='POST') {
-  # console.log("I am post");
+}else () {
+  console("I am post");
 	# var string = '';
 	# process.stdin.on('data', function(data) {
 	# 	string+=data;
