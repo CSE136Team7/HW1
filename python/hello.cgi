@@ -43,7 +43,7 @@ def randomBackground():
 		 			"navy", "olive", "purple", "red", "silver", "teal", "white", "yellow"]
 	dark = [1,2,4,8,10]
 	txtcolor = "white" if num - 1 in dark else "black"
-	return "background-color: {}, color: {}".format(bgs[num - 1], txtcolor)
+	return "background-color: {}; color: {}".format(bgs[num - 1], txtcolor)
 
 
 def main():
