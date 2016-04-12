@@ -9,8 +9,9 @@ var data = '';
 	});
 
 	process.stdin.on('end', function() {
-		var d = querystring.parse(data)
+		var d = querystring.parse(data);
 		console.log(d.username + d.password + d.magicnum);
+		console.log('hello there');
 	});
 
 
