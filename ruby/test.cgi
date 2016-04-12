@@ -19,7 +19,7 @@ def printHTML(string, magicnum)
 	puts "</body>\n</html>"
 end
 
-printHTML("<h1> Hello " + username + " with the password of " + password + "</h1>", magicnum)
+puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
 
 
 
