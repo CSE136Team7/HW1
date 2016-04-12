@@ -25,9 +25,37 @@ console.log(header + body);
 
 var obj = process.env;
 var a =Object.getOwnPropertyNames(obj).sort();
-a.forEach(function(val, idx, array) {
-  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
-}); 
+var server = [];
+var browser = [];
+var sindex = 0;
+var bindex = 0;
+for (int i = 0; i < obj.length; i++){
+    if (obj[i].startsWith("HTTP") || obj[i].startsWith("REQUEST") || obj[i].startsWith("REMOTE") || obj[i].startsWith("QUERY") || obj[i].startsWith("I")) {
+        browser[bindex] = obj[i];
+        bindex++;
+    }
+    else{
+        server[sindex] = obj[i];
+        sindex++;
+    }
+}
 
+//a.forEach(function(val, idx, array) {
+//  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
+//}); 
+ 
+console.log("<h1>Browser</h1>");
+bindex = 0;
+browser.forEach(function(val, idx, array) {
+    console.log('<b>' + val + ': ' + '</b>' + browser[bindex]);
+    bindex++;
+});
+ 
+console.log("<h1>Server</h1>");
+sindex = 0;
+server.forEach(function(val, idx, array) {
+    console.log('<b>' + val + ': ' + '<b>' + server[sindex]);
+    sindex++;
+});
 
 
