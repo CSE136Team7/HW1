@@ -73,16 +73,3 @@ var postHTML =
 
 console.log(postHTML);
 
-var bodyParser = require('body-parser')
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-})); 
-pp.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); 
-app.post('/userlogin', function(req, res) {
-    var name = req.body.name,
-        color = req.body.color;
-    // ...
-});
-
