@@ -14,13 +14,19 @@ if (process.env.REQUEST_METHOD==='GET') {
 
 
 
-  var s='<h1> Hello ' + username + ' with a password of ' + password+ '<br> </h1>';
   for (var i=0; i<magicnumber; i++) {
-  console.log(s);
+  console.log("<!DOCTYPE html>
+        <html lang='en'>
+        <head>
+          <title>Processdata form node</title>
+        </head>
+        <body >
+         <h1> Hello " + username + "with a password of " + password+ "<br> </h1>
+        </body>
+        </html>");
   }
 }
 else if(process.env.REQUEST_METHOD==='POST'){
-  console.log(process.env.REQUEST_METHOD);
 	var data = '';
 	process.stdin.on('data', function(chunk) {
 		data+=chunk;
@@ -31,11 +37,16 @@ else if(process.env.REQUEST_METHOD==='POST'){
     var password = res[1].split("=")[1];
     var magicnumber = res[2].split("=")[1];
 
-
-
-    var s='<h1> Hello ' + username + ' with a password of ' + password+ '<br> </h1>';
     for (var i=0; i<magicnumber; i++) {
-      console.log(s);
+      console.log("<!DOCTYPE html>
+            <html lang='en'>
+            <head>
+              <title>Processdata form node</title>
+            </head>
+            <body >
+             <h1> Hello " + username + "with a password of " + password+ "<br> </h1>
+            </body>
+            </html>");
     }
     });
 }
