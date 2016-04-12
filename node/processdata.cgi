@@ -11,15 +11,12 @@ var res = b.split("&");
 var username = res[0].split("=")[1];
 var password = res[1].split("=")[1];
 var magicnumber = res[2].split("=")[1];
-//var a = Object.getOwnPropertyNames(obj);
-console.log(username  + '<br>');
-console.log(password  + '<br>');
-console.log(magicnumber  + '<br>');
+
 
 
 
 //console.log(a);
-var s='Hello ' + username + ' with a password of ' + password;
+var s='<h1> Hello ' + username + ' with a password of ' + password+ '<br> </h1>';
 for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
