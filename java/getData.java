@@ -104,14 +104,35 @@ public static boolean MethGet()
         form_data.put(key,value);
     }
 
+    int err = 0;
+
     String username = form_data.get("username");
     String password = form_data.get("password");
     String magicNum = form_data.get("magicnum");
 
-    int magicnum = Integer.parseInt(magicNum);
+    if (username.equals("") || password.equals("") ){
+        System.out.println("Generic error message: empty field");
+        err = -1;
+    }
+    int magicnum = -999;
+try{
+    magicnum = Integer.parseInt(magicNum);
+}
+catch(Exception e){
+    err = -2;
+    System.out.println("Generic Error message: NaN");
+}
+    if (magicnum <= 0)
+    {
+        System.out.println("generic error message: less than 1");
+        err = -3;
+    }
 
-    for(int i = 0; i < magicnum; i++){
-      System.out.println("<h1>Hello " + username + " with a password of " + password + "</h1>");
+    if (err >= 0){ 
+        for(int i = 0; i < magicnum; i++){
+            System.out.println("<h1>Hello " + username + " with a password of " + password + "</h1>");
+        }
+
     }
 
     System.out.println("</body>\n</html>\n");
