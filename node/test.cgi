@@ -17,7 +17,6 @@ var body =
 +'<h2 style="margin-bottom:20px"> Hello World from JavaScript @ ' + d + '</h2>'
 + '<hr>' 
 +'<h2 align="center">Environment Variables</h2>'
-
 +'</body>'
 +'<html>';
 
