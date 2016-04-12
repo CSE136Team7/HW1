@@ -45,7 +45,8 @@ public static boolean MethGet()
 
     System.out.println("Content-type: text/html\n\n");
 
-    String top = "<html>\n"
+    String top = "<!doctype html>\n"
+          + "<meta charset='UTF-8'>\n"
           + "<title>\n"
           + "java src"
           + "\n"

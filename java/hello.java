@@ -13,8 +13,9 @@ class hello {
     //
     // Create the Top of the returned HTML page
     //
-    String Top = "<html>\n"
+    String Top = "<!doctype html>\n"
         + "<head>\n"
+        + "<meta charset='UTF-8'>\n"
         + "<title>\n"
         + "java src"
         + "\n"
