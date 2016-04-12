@@ -4,7 +4,7 @@ import cgitb, cgi
 
 def main():
         cgitb.enable()
-        print ("Content-Type: text/html;charset-utf-8")
+        print ("Content-Type: text/html;charset=utf-8")
         print ("")
         form = cgi.FieldStorage()
         try:
