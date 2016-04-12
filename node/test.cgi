@@ -27,13 +27,14 @@ var server = [];
 var browser = [];
 var sindex = 0;
 var bindex = 0;
-for (int i = 0; i < obj.length; i++){
-    if (obj[i].startsWith("HTTP") || obj[i].startsWith("REQUEST") || obj[i].startsWith("REMOTE") || obj[i].startsWith("QUERY") || obj[i].startsWith("I")) {
-        browser[bindex] = obj[i];
+obj.forEach(function val, idx, array){
+//for (int i = 0; i < obj.length; i++){
+    if (val.startsWith("HTTP") || val.startsWith("REQUEST") || val.startsWith("REMOTE") || val.startsWith("QUERY") || val.startsWith("I")) {
+        browser[bindex] = val;
         bindex++;
     }
     else{
-        server[sindex] = obj[i];
+        server[sindex] = val];
         sindex++;
     }
 }

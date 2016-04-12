@@ -3,14 +3,16 @@
 var header ='Content-type: text/html\n\n';
 console.log(header);
 
+var data = '';
+	process.stdin.on('data', function(chunk) {
+		data+=chunk;
+	});
 
-var ReadableStream = Object.getPrototypeOf(process.stdin);
-console.log('readable:' + ReadableStream);
-
-
-process.stdin.on('end', function() {
-  process.stdout.write('end');
-});
+	process.stdin.on('end', function() {
+		var d = querystring.parse(data);
+		console.log(d.username + d.password + d.magicnum);
+		console.log('hello there');
+	});
 
 
 var obj = process.env;
