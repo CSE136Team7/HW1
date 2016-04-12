@@ -7,14 +7,14 @@ var usernamelist = document.getElementsByName("username");
 var username = "";
 var i;
 for (i = 0; i < usernamelist.length ;i++) {
-   username += usernamelist[i].value + "<br>";
+   username += usernamelist.elements[i].value + "<br>";
    
 var passwordlist = document.getElementsByName("password");
 
 var password = "";
 var i;
 for (i = 0; i < passwordlist.length ;i++) {
-   password += passwordlist[i].value + "<br>";
+   password += passwordlist.elements[i].value + "<br>";
    
 var magicnum = document.getElementsByName("magicnum");
 }
