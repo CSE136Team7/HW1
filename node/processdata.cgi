@@ -19,7 +19,7 @@ if (process.env.REQUEST_METHOD==='GET') {
   for (var i=0; i<magicnumber; i++) {
   console.log(s);
   }
-}else()
+}else{
 	var b = '';
 	process.stdin.on('data', function(data) {
 		b+=data;
