@@ -9,7 +9,7 @@ echo "<!DOCTYPE html>
       <body>";
         if($_SERVER['REQUEST_METHOD']=="GET"){
           parse_str($_SERVER['QUERY_STRING']);
-          if($username == "" || $password == "" || $magicnum < 0 || !is_numeric($magicnum ||$magicnum =="")){
+          if($username == "" || $password == "" || $magicnum < 0 || !is_numeric($magicnum) ||$magicnum ==""){
             echo"There was an error with your input";
           }else{
               for($i = 0; $i<$magicnum;$i++){
