@@ -1,0 +1,1 @@
+echo javac hello.java
