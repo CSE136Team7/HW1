@@ -23,7 +23,7 @@ end
 
 text1 = "<h1> Hello " + username + " with the password of " + password + "</h1>\n"
 
-for i in 0...5 do
+for i in 0...magicnum do
 	puts text1
 end
 #printHTML(text1)
