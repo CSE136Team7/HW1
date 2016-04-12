@@ -10,7 +10,7 @@ var data = '';
 
 	process.stdin.on('end', function() {
 		var d = querystring.parse(data);
-		console.log(d.username + d.password + d.magicnum);
+		printBody(d.username, d.password, d.magicnum);
 		console.log('hello there');
 	});
 
@@ -30,16 +30,4 @@ var s='<h1> Hello ' + username + ' with a password of ' + password+ '<br> </h1>'
 for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
-
-
-/*
-process.stdin('data', function(chunk) {
- process.stdout.write('data: ' + chunk);
- data++;
-});
-*/
-
-
-
-
 
