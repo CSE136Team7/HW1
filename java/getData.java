@@ -111,7 +111,7 @@ public static boolean MethGet()
     String magicNum = form_data.get("magicnum");
 
     if (username.equals("") || password.equals("") ){
-        System.out.println("Generic error message");
+        System.out.println("Generic error message: empty field");
         err = -1;
     }
     int magicnum = -999;
@@ -120,8 +120,13 @@ try{
 }
 catch(Exception e){
     err = -2;
-    System.out.println("Generic Error message");
+    System.out.println("Generic Error message: NaN");
 }
+    if (magicnum <= 0)
+    {
+        System.out.println("generic error message: less than 1");
+        err = -3;
+    }
 
     if (err >= 0){ 
         for(int i = 0; i < magicnum; i++){
