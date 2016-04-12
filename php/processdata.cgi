@@ -14,11 +14,13 @@ echo "<!DOCTYPE html>
           }
         }
 
-        # if(strcmp($_SERVER['REQUEST_METHOD'],"POST")==0) {
-        #   # for($j = 0; $j<$_POST["magicnum"];$j++){
-        #   # echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
-        #   # }
-        # }
+        if($_SERVER['REQUEST_METHOD']=="POST") {
+          parse_str($_SERVER['QUERY_STRING']);
+          echo $username;
+          # for($j = 0; $j<$_POST["magicnum"];$j++){
+          # echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
+          # }
+        }
 
       echo "</body>
       </html>";
