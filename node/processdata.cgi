@@ -6,8 +6,8 @@ console.log(header);
 
 
 var obj = process.env;
- var b = obj['QUERY_STRING']; 
- 
+ var b = obj['QUERY_STRING'];
+
 
 var res = b.split("&");
 var username = res[0].split("=")[1];
@@ -21,3 +21,12 @@ for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
 
+var data = '';
+	process.stdin.on('data', function(dt) {
+		data+=dt;
+	});
+
+	process.stdin.on('end', function() {
+		var d = querystring.parse(data)
+		printBody(d.username, d.password, d.magicnum);
+	});
