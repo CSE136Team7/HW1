@@ -34,7 +34,7 @@ for (var i = 0; i < obj.size(); i++){
         bindex++;
     }
     else{
-        server[sindex] = val];
+        server[sindex] = val;
         sindex++;
     }
 }
