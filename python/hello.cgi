@@ -11,7 +11,7 @@ def getSortedEnvVars():
 	return list
 
 def printHTML():
-	print "Content-Type: text/html;charset-utf-8"
+	print "Content-Type: text/html;charset-utf-8\n\n"
 	print "<!doctype html>\n<html lang='en'>\n<head>\n<title>HW1 in Python</title>\n</head>"
 	print "<body style='{}'>\n".format(randomBackground())
 	printGreeting()
