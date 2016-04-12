@@ -10,7 +10,7 @@ echo "<!DOCTYPE html>
       <body style='background-color:$color'>
         <br>
         <h1>Browser Variables</h1>
-        <br>
+
         <table>
         <tr>
           <td>HTTP_ACCEPT</th>
@@ -82,7 +82,7 @@ echo "<!DOCTYPE html>
       <br>
       <br>
       <h1>Server Variables</h1>
-      <br>
+
       <table>
       <tr>
         <td>argc</th>
