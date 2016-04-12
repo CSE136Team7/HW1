@@ -2,6 +2,22 @@
 
 var header ='Content-type: text/html\n\n';
 console.log(header);
+
+
+var ReadableStream = Object.getPrototypeOf(process.stdin);
+console.log('readable:' + ReadableStream[0]);
+process.stdin.on('readable', function() {
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write(chunk);
+  }
+});
+
+process.stdin.on('end', function() {
+  process.stdout.write('end');
+});
+
+
 var obj = process.env;
  var b = obj['QUERY_STRING']; 
  
@@ -37,7 +53,6 @@ process.stdin.on('end', function() {
   process.stdout.write('end');
 });
 
-var ReadableStream = Object.getPrototypeOf(process.stdin);
-console.log('readable:' + ReadableStream [0]);
+
 
 
