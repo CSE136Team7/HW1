@@ -5,7 +5,16 @@ var d = new Date();
 
 var bgcolorlist=["aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "white", "yellow"];
 var backgroundcolor=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
+<<<<<<< HEAD
 backgroundcolor="black";
+=======
+
+if (backgroundcolor==="black") {
+  console.log(
+    '<!doctype html>'
+    +'<body style="color:white;">' );
+}
+>>>>>>> parent of e85ffbe... Update test.cgi
 
 var body =
 '<!doctype html>'
