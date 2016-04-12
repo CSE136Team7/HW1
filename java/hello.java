@@ -77,7 +77,7 @@ class hello {
         Map<String, String> env = System.getenv();
         int sindex = 0, bindex = 0;
 
-        for (String envName : env.keySet() {
+        for (String envName : env.keySet()) {
             if (envName.startsWith("HTTP") || envName.startsWith("REQUEST") || envName.startsWith("REMOTE") || envName.startsWith("QUERY") || envName.startsWith("I")) {
                 bindex++;
             }
