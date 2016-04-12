@@ -7,6 +7,8 @@ echo "<!DOCTYPE html>
         <title>process data in PHP</title>
       </head>
       <body>";
+       echo strcmp($_SERVER['REQUEST_METHOD'],"GET");
+       echo strcmp($_SERVER['REQUEST_METHOD'],"get");
         if(strcmp($_SERVER['REQUEST_METHOD'],"get")==0){
           for($i = 0; $i<$_GET["magicnum"];$i++){
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
