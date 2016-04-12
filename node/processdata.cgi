@@ -6,7 +6,7 @@ console.log(header + '<h1>Hello  with a password of </h1></br>');
 var username = process.env.REQUEST_METHOD==='GET';
 var obj = process.env;
 var a = Object.getOwnPropertyNames(obj);
-var b = obj['REMOTE_ADDR'];
+var b = obj['QUERY_STRING'];
 
 console.log(username);
 console.log(a);
