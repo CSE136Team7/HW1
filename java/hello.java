@@ -141,7 +141,7 @@ class hello {
  
     System.out.println("<h1>Form Test</h1>");
         System.out.println("<hr>");
-        System.out.println("<form action='hello.cgi' method='post'>");
+        System.out.println("<form action='getdata.cgi' method='post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
         System.out.println(" <br>");
         System.out.println("<label>Password: <input type='password' name='password'></label>");
