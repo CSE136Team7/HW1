@@ -14,7 +14,7 @@ def main():
         except ValueError:
                 print("<p>There was an error with your input</p>")
         else:
-                if username == "" or password == "":
+                if not username or not password:
                         print("<p>Either pass or username was empty</>")
                 s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
                 s = s * magicnum1
