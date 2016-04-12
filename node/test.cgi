@@ -5,7 +5,6 @@ var d = new Date();
 
 var bgcolorlist=["aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "white", "yellow"];
 var backgroundcolor=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
-backgroundcolor="black";
 
 var body =
 '<!doctype html>'
@@ -20,10 +19,6 @@ var body =
 +'<h2 align="center">Environment Variables</h2>'
 +'</body>'
 +'<html>';
-
-if (backgroundcolor=="black") {
-  body.fontcolor("white");
-}
 
 console.log(header + body);
 
