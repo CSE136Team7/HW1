@@ -29,7 +29,6 @@ a.forEach(function(val, idx, array) {
   console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
 }); 
 
-/*
 console.log( '<!doctype html>'
 + '<hr style="margin-top:20px">'
 +'<h3>Post Form</h3>'
@@ -57,19 +56,5 @@ console.log( '<!doctype html>'
 +'</form>'
 +'</body>'
 +'</html>');
-*/
 
-var postHTML = 
-  '<html><head><title>Post Example</title></head>' +
-  '<body>' +
-  '<form id="loginformA" action="userlogin" method="post">' 
-  +'<div>'
-  + '<label for="email">Email: </label>'
-  + '<input type="text" id="email" name="email"></input>'
-  + '</div>'
-+ '<input type="submit" value="Submit"></input>'
-  + '</form>' 
- + '</body></html>';
-
-console.log(postHTML);
 
