@@ -6,6 +6,16 @@ console.log(header);
 
 var ReadableStream = Object.getPrototypeOf(process.stdin);
 console.log('readable:' + ReadableStream[0]);
+process.stdin.on('readable', function() {
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write(chunk);
+  }
+});
+
+process.stdin.on('end', function() {
+  process.stdout.write('end');
+});
 
 
 var obj = process.env;
