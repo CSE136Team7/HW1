@@ -19,7 +19,11 @@ def printHTML(string, magicnum)
 	puts "</body>\n</html>"
 end
 
-puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
+puts magicnum
+
+for i in 0..magicnum
+	puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
+end
 
 
 
