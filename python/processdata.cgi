@@ -24,7 +24,7 @@ def validateInt(string):
         m = 0
         m = int(string)
         if (m < 1):
-                raise Exception(ValueError)
+                raise ValueError
         return m
 if __name__ == "__main__":
         main()
