@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
 var header ='Content-type: text/html\n\n';
-console.log(header + '<h1>Hello  with a password of </h1></br>');
+console.log(header);
 //console.log("Content-Type: text/html;charset=utf-8\n\n");
 var obj = process.env;
  var b = obj['QUERY_STRING']; 
- console.log(b);
+ console.log(b + '<br>');
 
 var res = b.split("&");
 var username = res[0].split("=")[1];
