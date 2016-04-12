@@ -2,7 +2,7 @@
 
 var header ='Content-type: text/html\n\n';
 console.log(header);
-
+console.log(process.env.REQUEST_METHOD);
 if (process.env.REQUEST_METHOD==='GET') {
   var obj = process.env;
    var b = obj['QUERY_STRING'];
