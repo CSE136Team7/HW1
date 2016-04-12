@@ -8,7 +8,7 @@ class hello {
     //
     // Print the required cgi header
     //
-    System.out.println("Content-type: text/html\n\n");
+    System.out.println("Content-Type: text/html\n\n");
 
     //
     // Create the Top of the returned HTML page
