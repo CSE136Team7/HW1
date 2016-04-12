@@ -16,7 +16,7 @@ def main():
         else:
                 s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
                 s = s * magicnum1
-                printHTML(string)
+                printHTML(s)
 
 def printHTML(string):
 	print "Content-Type: text/html;charset=utf-8\n\n"
