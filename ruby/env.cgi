@@ -22,7 +22,7 @@ def envTables()
     bindex = 0
     sindex = 0
     for e in ENV
-        if e.include? "HTTP" || e.include? "REQUEST" || e.include? "REMOTE" || e.include? "QUERY" || e.include? "I"
+        if e.include?: "HTTP" || e.include?: "REQUEST" || e.include?: "REMOTE" || e.include?: "QUERY" || e.include?: "I"
             browser[bindex] = e
             bindex = bindex + 1
         else
