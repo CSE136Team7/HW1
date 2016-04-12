@@ -21,7 +21,7 @@ var body =
 +'</body>'
 +'<html>';
 
-if (backgroundcolor==="black") {
+if (backgroundcolor=="black") {
   body.fontcolor("white");
 }
 
