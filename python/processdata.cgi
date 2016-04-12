@@ -3,29 +3,29 @@
 import cgitb, cgi
 
 def main():
-	cgitb.enable()
-	print ("Content-Type: text/html;charset-utf-8")
-	print ("")
-	form = cgi.FieldStorage()
-	try:
-		username = validateString(form.getvalue('username'))
-		password = validateString(form.getvalue('password'))
-		magicnum1 = validateInt(form.getvalue('magicnum'))
-	except ValueError:
-		print("<p>There was an error with your input</p>")
-	else if (magicnum1 < 1):
-        print("error")
-    else:
-		s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
-		s = s * magicnum1
-		print(s)
+        cgitb.enable()
+        print ("Content-Type: text/html;charset-utf-8")
+        print ("")
+        form = cgi.FieldStorage()
+        try:
+                username = validateString(form.getvalue('username'))
+                password = validateString(form.getvalue('password'))
+                magicnum1 = validateInt(form.getvalue('magicnum'))
+        except ValueError:
+                print("<p>There was an error with your input</p>")
+        else:
+                s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
+                s = s * magicnum1
+                print(s)
 
 def validateString(string):
-	return str(string)
+        return str(string)
 def validateInt(string):
-    m = int(string)
-    if (m < 1)
-        raise Exception(ValueError)
-	return m
+        m = 0
+        m = int(string)
+        if (m < 1):
+                raise Exception(ValueError)
+        return m
 if __name__ == "__main__":
-	main()
+        main()
+
