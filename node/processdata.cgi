@@ -23,7 +23,7 @@ if (process.env.REQUEST_METHOD==='GET') {
 
 
 if (process.env.REQUEST_METHOD==='POST') {
-  console.log("I am post");
+  # console.log("I am post");
 	# var string = '';
 	# process.stdin.on('data', function(data) {
 	# 	string+=data;
