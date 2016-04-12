@@ -20,35 +20,19 @@
 <input type="submit" value="send" onclick="main1()">
 </form>
 
-
-<hr>
-<h3>Get Form</h3>
-<form id="getform" method="get">
-<label>Name: <input type="text" name="username"></label>
-<br>
-<label>Password: <input type="password" name="password"></label>
-<br>
-<label>Magic Number: <input type="text" name="magicnum" size="2" maxlength="2"></label>
-<br>
-<input type="hidden" name="test" value="it">
-<input type="submit" value="send" onclick="main1()">
-</form>
-
 <script>
   function main1(){
 try {
 var usernamelist = document.getElementsByName("username");
-
 var username = "";
 var i;
-for (i = 0; i < x.length ;i++) {
+for (i = 0; i < usernamelist.length ;i++) {
    username += usernamelist.elements[i].value + "<br>";
-   
-var passwordlist = document.getElementsByName("password");
 
+var passwordlist = document.getElementsByName("password");
 var password = "";
 var i;
-for (i = 0; i < x.length ;i++) {
+for (i = 0; i < passwordlist.length ;i++) {
    password += passwordlist.elements[i].value + "<br>";
    
 var magicnum = document.getElementsByName("magicnum");
@@ -60,9 +44,22 @@ catch(err) {
 //s = s * magicnum1;
 //var myWindow = window.open("", "_self");
 document.write("<h1>Hello " + username +" with a password of " + password+ "</h1></br>");
-document.write("test");
 }
 </script>
+
+<hr>
+<h3>Get Form</h3>
+<form id="getform" method="get" action="processdata.cgi">
+<label>Name: <input type="text" name="username"></label>
+<br>
+<label>Password: <input type="password" name="password"></label>
+<br>
+<label>Magic Number: <input type="text" name="magicnum" size="2" maxlength="2"></label>
+<br>
+<input type="hidden" name="test" value="it">
+<input type="submit" value="send">
+</form>
+
 
 </body>
 </html>
