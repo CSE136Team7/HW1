@@ -15,7 +15,7 @@ var body =
 +'</head>'
 +'<body style= "background-color:'+ backgroundcolor + ';">'
 +'<h2 style="margin-bottom:20px"> Hello World from JavaScript @ ' + d + '</h2>'
-+ '<hr>' 
++ '<hr>'
 +'<h2 align="center">Environment Variables</h2>'
 +'</body>'
 +'<html>';
@@ -57,3 +57,28 @@ console.log( '<!doctype html>'
 +'</form>'
 +'</body>'
 +'</html>');
+
+
+var http = require('http');
+var postHTML = 
+  '<html><head><title>Post Example</title></head>' +
+  '<body>' +
+  '<form method="post">' +
+  'Input 1: <input name="input1"><br>' +
+  'Input 2: <input name="input2"><br>' +
+  '<input type="submit">' +
+  '</form>' +
+  '</body></html>';
+
+
+http.createServer(function (req, res) {
+  var body = "";
+  req.on('data', function (chunk) {
+    body += chunk;
+  });
+  req.on('end', function () {
+    console.log('POSTed: ' + body);
+    res.writeHead(200);
+    res.end(postHTML);
+  });
+}).listen(8080);
