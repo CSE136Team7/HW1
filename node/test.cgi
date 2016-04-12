@@ -39,18 +39,18 @@ for (var i = 0; i < obj.length; i++){
     }
 }
 
-//a.forEach(function(val, idx, array) {
-//  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
-//}); 
+a.forEach(function(val, idx, array) {
+  console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
+}); 
  
-console.log("<h1>Browser</h1>");
-browser.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '</b>' + browser[val] + '<br>');
-});
+//console.log("<h1>Browser</h1>");
+//browser.forEach(function(val, idx, array) {
+//    console.log('<b>' + val + ': ' + '</b>' + browser[val] + '<br>');
+//});
  
-console.log("<h1>Server</h1>");
-server.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '<b>' + server[val] + '<br>');
-});
+//console.log("<h1>Server</h1>");
+//server.forEach(function(val, idx, array) {
+//    console.log('<b>' + val + ': ' + '<b>' + server[val] + '<br>');
+//});
 
 console.log("</body></html>");
