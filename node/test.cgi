@@ -3,6 +3,9 @@
 var header ='Content-type: text/html\n\n';
 var d = new Date();
 
+var bgcolorlist=["aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "white", "yellow"];
+var backgroundcolor=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
+
 var body =
 '<!doctype html>'
 +'<head>'
@@ -10,14 +13,11 @@ var body =
 +'Hello world node'
 +'</title>'
 +'</head>'
-+'<body>'
++'<body style= 'background:backgroundcolor'>'
 +'<h2 style="margin-bottom:20px"> Hello World from JavaScript @ ' + d + '</h2>'
 + '<hr>' 
 +'<h2 align="center">Environment Variables</h2>'
-+ '<script>'
-+ 'var bgcolorlist=["#DFDFFF", "#FFFFBF", "#80FF80", "#EAEAFF", "#C9FFA8", "#E8FFB3", "#ECE8D5", "#FA8072", "#DDDD00", "#D2B48C", "#FF7F50", "#F5FFFA", "#96CDCD", "#A27EAF", "#61456A", "#33659A"];'
-+ 'document.body.style.background=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];'
-+ ' </script>'
+
 +'</body>'
 +'<html>';
 
