@@ -4,5 +4,5 @@ puts "Content-type: text/html\n\n"
 
 a = ENV['QUERY_STRING']
 
-puts "a"
+puts a
 
