@@ -16,7 +16,7 @@ echo "<!DOCTYPE html>
       <head>
         <title>Hello page in PHP</title>
       </head>
-      <body style='background-color:$color; font-color:$font_color'>
+      <body style='background-color:$color; color:$font_color'>
         <h1>Hello World from PHP @ " .date("Y/m/d"). "</h1>
       </body>
       </html>";
