@@ -98,12 +98,8 @@ def envTables()
     remote = 'REMOTE' 
     query = 'QUERY'
     
-    for e in ENV
-        if e.include? http || 
-           e.include? request || 
-           e.include? remote || 
-           e.include? query
-        then
+    for e in ENV.keys do
+        if [http, request, remote, query].include? e 
             browser[bindex] = e
             bindex = bindex + 1
         else
@@ -113,22 +109,26 @@ def envTables()
     end
     puts "<h1>Browser</h1>"
     puts "<table>"
+    bindex = bindex - 1
     for bi in 0..bindex
         puts "<tr><td><strong>"
         puts browser[bi]
         puts ":</strong></td><td>"
         puts ENV[browser[bi]]
         puts "</td><tr>"
+        puts "b index" + bi.to_s
     end
     puts "</table>"
     puts "<h1>Server</h1>"
     puts "<table>"
+    sindex = sindex - 1
     for si in 0..sindex
         puts "<tr><td><strong>"
         puts server[si]
         puts ":</strong></td><td>"
         puts ENV[server[si]]
         puts "</td></tr>"
+        puts "s index" + si.to_s
     end
     puts "</table>"
 end
