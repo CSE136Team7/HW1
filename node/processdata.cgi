@@ -4,7 +4,7 @@ var header ='Content-type: text/html\n\n';
 console.log(header);
 
 
-var ReadableStream = Object.getPrototypeOf(process.stdin).value;
+var ReadableStream = Object.getPrototypeOf(process.stdin);
 console.log('readable:' + ReadableStream);
 
 
