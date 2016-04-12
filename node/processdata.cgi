@@ -38,6 +38,6 @@ process.stdin.on('end', function() {
 });
 
 var ReadableStream = Object.getPrototypeOf(process.stdin);
-console.log('readable:' + ReadableStream);
+console.log('readable:' + ReadableStream [0]);
 
 
