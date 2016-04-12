@@ -8,14 +8,14 @@ echo "<!DOCTYPE html>
       </head>
       <body>";
       echo "i am here";
-        if($_SERVER['REQUEST_METHOD']=='GET') {
+        if($_SERVER['REQUEST_METHOD']=="GET") {
           for($i = 0; $i<$_GET["magicnum"];$i++){
             echo "i am there";
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
         }
         }
 
-        if($_SERVER['REQUEST_METHOD']=='POST') {
+        if($_SERVER['REQUEST_METHOD']=="POST") {
           for($j = 0; $j<$_POST["magicnum"];$j++){
           echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
         }
