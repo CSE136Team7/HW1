@@ -7,13 +7,15 @@ puts "<meta charset='UTF-8'>
 puts "</head>"
 puts "<body>"
 
-puts "<h1> Enviroment Variables</h1>"
+puts "<h1>Hello World from Ruby @ " + Time.new.inspect + "</h1>"
+puts "<hr>"
 
 envTables()
 
 puts "</body></html>"
 
 def envTables()
+    puts "<h1>Environment Variables</h1>"
     ENV.sort
     browser = []
     server = []
@@ -28,7 +30,6 @@ def envTables()
             sindex = sindex + 1
         end
     end
-
     puts "<h1>Browser</h1>"
     puts "<table>"
     for bi in 0..bindex
@@ -49,6 +50,5 @@ def envTables()
         puts "</td></tr>"
     end
     puts "</table>"
-
 end
 
