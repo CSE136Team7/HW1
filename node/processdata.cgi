@@ -35,6 +35,7 @@ else if(process.env.REQUEST_METHOD==='POST'){
 
     var s='<h1> Hello ' + username + ' with a password of ' + password+ '<br> </h1>';
     for (var i=0; i<magicnumber; i++) {
-    console.log(s);
+      console.log(s);
+    }
     });
 }
