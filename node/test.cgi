@@ -63,17 +63,11 @@ var postHTML =
   '<html><head><title>Post Example</title></head>' +
   '<body>' +
   '<form method="post" action="/">' +
-  '<input type="text" name="user[name]">' +
-  '<input type="text" name="user[email]">' +
+  '<input type="text" name="user">' +
+  '<input type="text" name="user1[email]">' +
   '<input type="submit" value="Submit">' +
   '</form>' +
   '</body></html>';
 
 console.log(postHTML);
 
-app.use(express.bodyParser());
-
-app.post('/', function(request, response){
-    console.log(request.body.user.name);
-    console.log(request.body.user.email);
-});
