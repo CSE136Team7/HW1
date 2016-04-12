@@ -107,7 +107,7 @@ class hello {
         
         System.out.println("<h1>Browser</h1>");
         System.out.println("<table>");
-        for (int bi = 0; bi <= bindex; bi++)
+        for (int bi = 0; bi < bindex; bi++)
         {
             System.out.println("<tr>");
             System.out.println("<td>");
@@ -122,7 +122,7 @@ class hello {
 
         System.out.println("<h1>Server</h1>");  
         System.out.println("<table>");
-        for (int si = 0; si <= sindex; si++)
+        for (int si = 0; si < sindex; si++)
         {
             System.out.println("<tr>");
             System.out.println("<td>");
