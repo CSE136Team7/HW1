@@ -23,6 +23,7 @@ def printHTML(string):
 	print "<body >\n"
 	print string
 	print "</body>\n</html>"
+    
 
 def validateString(string):
         if not string:
