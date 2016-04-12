@@ -8,7 +8,7 @@ var obj = process.env;
 var a = Object.getOwnPropertyNames(obj)['QUERY_STRING'];
 
 console.log(username);
-console.log(a);
+console.log(Object.getOwnPropertyNames(obj)['QUERY_STRING']);
 //var username = document.getElementsByName("username")[0].value;
 
 
