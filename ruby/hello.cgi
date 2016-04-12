@@ -1,11 +1,10 @@
 #!/usr/bin/ruby
 def printHTML()
-	print "Content-Type: text/html;charset=utf-8\n\n"
-	print "<!doctype html>\n<html lang='en'>\n<head>\n<title>HW1 in Ruby</title>\n</head>"
-	print "<body style='" + randomBackground() + "'>\n"
+	puts "Content-Type: text/html;charset=utf-8\n\n"
+	puts "<!doctype html>\n<html lang='en'>\n<head>\n<title>HW1 in Ruby</title>\n</head>"
+	puts "<body style='" + randomBackground() + "'>\n"
 	printGreeting()
-	printEnvTable()
-	print "</body>\n</html>"
+	puts "</body>\n</html>"
 end
 
 def printGreeting()
