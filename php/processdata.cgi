@@ -18,10 +18,10 @@ echo "<!DOCTYPE html>
           while($f = fgets(STDIN)){
             $string=  $f;
           }
-          echo $string;
-          # for($j = 0; $j<$_POST["magicnum"];$j++){
-          # echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
-          # }
+          parse_str($string);
+          for($j = 0; $j<$magicnum;$j++){
+          echo "<h1>Hello ".$username." with a password of  ".$password." !</h1>";
+          }
         }
 
       echo "</body>
