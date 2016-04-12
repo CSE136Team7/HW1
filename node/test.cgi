@@ -44,17 +44,13 @@ for (var i = 0; i < obj.length; i++){
 //}); 
  
 console.log("<h1>Browser</h1>");
-bindex = 0;
 browser.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '</b>' + browser[bindex] + '<br>');
-    bindex++;
+    console.log('<b>' + val + ': ' + '</b>' + browser[val] + '<br>');
 });
  
 console.log("<h1>Server</h1>");
-sindex = 0;
 server.forEach(function(val, idx, array) {
-    console.log('<b>' + val + ': ' + '<b>' + server[sindex] + '<br>');
-    sindex++;
+    console.log('<b>' + val + ': ' + '<b>' + server[val] + '<br>');
 });
 
 console.log("</body></html>");
