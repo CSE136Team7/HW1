@@ -29,7 +29,7 @@ a.forEach(function(val, idx, array) {
   console.log('<b>' + val + ': ' + '</b>'  + obj[val]+ '<br>');
 }); 
 
-
+/*
 console.log( '<!doctype html>'
 + '<hr style="margin-top:20px">'
 +'<h3>Post Form</h3>'
@@ -57,28 +57,23 @@ console.log( '<!doctype html>'
 +'</form>'
 +'</body>'
 +'</html>');
+*/
 
-
-var http = require('http');
 var postHTML = 
   '<html><head><title>Post Example</title></head>' +
   '<body>' +
-  '<form method="post">' +
-  'Input 1: <input name="input1"><br>' +
-  'Input 2: <input name="input2"><br>' +
-  '<input type="submit">' +
+  '<form method="post" action="/">' +
+  '<input type="text" name="user[name]">' +
+  '<input type="text" name="user[email]">' +
+  '<input type="submit" value="Submit">' +
   '</form>' +
   '</body></html>';
 
+console.log(postHTML);
 
-http.createServer(function (req, res) {
-  var body = "";
-  req.on('data', function (chunk) {
-    body += chunk;
-  });
-  req.on('end', function () {
-    console.log('POSTed: ' + body);
-    res.writeHead(200);
-    res.end(postHTML);
-  });
-}).listen(8080);
+app.use(express.bodyParser());
+
+app.post('/', function(request, response){
+    console.log(request.body.user.name);
+    console.log(request.body.user.email);
+});
