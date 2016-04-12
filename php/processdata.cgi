@@ -12,7 +12,7 @@ echo "<!DOCTYPE html>
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
           }
         }
-        echo "i am here
+        echo "i am here";
         if(strcmp($_SERVER['REQUEST_METHOD'],"POST")==0) {
           for($j = 0; $j<$_POST["magicnum"];$j++){
           echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
