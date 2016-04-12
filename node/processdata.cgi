@@ -18,9 +18,11 @@ for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
 
-process.stdin.resume();
-process.stdin.setEncoding('utf8');
+var chunk = '';
+
 process.stdin('data', function(chunk) {
  process.stdout.write('data: ' + chunk);
+ data++;
 });
+
 
