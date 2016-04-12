@@ -93,13 +93,24 @@ def envTables()
     server = []
     bindex = 0
     sindex = 0
-    http = 'HTTP'
-    request = 'REQUEST'
-    remote = 'REMOTE' 
-    query = 'QUERY'
+    http = "HTTP"
+    request = "REQUEST"
+    remote = "REMOTE" 
+    query = "QUERY"
     
     for e in ENV.keys do
-        if %w{ HTTP REQUEST REMOTE QUERY }.any? { |i| i.include?(e) }
+        puts e
+        if e.include? http 
+            browser[bindex] = e
+            bindex = bindex + 1
+        elsif e.include? request
+            browser[bindex] = e
+            bindex = bindex + 1
+        elsif e.include? remote
+            browser = bindex
+            bindex = bindex + 1 
+        elsif e.include? query
+        #if %w{ 'HTTP' 'REQUEST' 'REMOTE' 'QUERY' }.any? { |i| i.include?(e) }
             browser[bindex] = e
             bindex = bindex + 1
         else
