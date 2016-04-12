@@ -9,7 +9,9 @@ var backgroundcolor=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
 if (backgroundcolor==="black") {
   console.log(
     '<!doctype html>'
-    +'<body style="color:white;">' );
+    +'<body style="color:white;">'
+    +'</body>'
+    +'</html>');
 }
 
 var body =
