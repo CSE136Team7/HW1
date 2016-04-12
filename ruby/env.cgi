@@ -116,7 +116,6 @@ def envTables()
         puts ":</strong></td><td>"
         puts ENV[browser[bi]]
         puts "</td><tr>"
-        puts "b index" + bi.to_s
     end
     puts "</table>"
     puts "<h1>Server</h1>"
@@ -128,7 +127,6 @@ def envTables()
         puts ":</strong></td><td>"
         puts ENV[server[si]]
         puts "</td></tr>"
-        puts "s index" + si.to_s
     end
     puts "</table>"
 end
