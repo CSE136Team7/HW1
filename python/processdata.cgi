@@ -19,7 +19,6 @@ def main():
                 printHTML(s)
 
 def printHTML(string):
-	print "Content-Type: text/html;charset=utf-8\n\n"
 	print "<!doctype html>\n<html lang='en'>\n<head>\n<meta http-equiv='content-type' content=text/html; charset=utf-8 /><title>HW1 in Python</title>\n</head>"
 	print "<body >\n"
 	print string
