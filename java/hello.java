@@ -5,26 +5,26 @@ class hello {
 
   public static void main (String args[])
   {
-	//
-	// Print the required cgi header
-	//
-	System.out.println("Content-type: text/html\n\n");
+    //
+    // Print the required cgi header
+    //
+    System.out.println("Content-type: text/html\n\n");
 
-	//
-	// Create teh Top of the returned HTML page
-	//
-	String Top = "<html>\n"
+    //
+    // Create teh Top of the returned HTML page
+    //
+    String Top = "<html>\n"
         + "<head>\n"
         + "<title>\n"
         + "java src"
         + "\n"
         + "</title>\n"
         + "<style>\n";
-
+        
         // Generate a number between 1 and 16
         Random rand = new Random();
         int r = rand.nextInt(16);
-	switch(r){
+    switch(r){
           case 0:
             Top += "body { background: aqua; color: black; }\n"; break;
           case 1:
@@ -63,25 +63,25 @@ class hello {
 
 
 
-        Top += "</style>\n"
+        Top += "</style>\n" 
         + "</head>\n"
         + "<body>\n";
           System.out.println(Top);
           System.out.println("Hello World from Java @" + new Date());
+    
 
+    System.out.println("<hr>");
 
-	System.out.println("<hr>");
+    Map<String, String> env = System.getenv();
 
-	Map<String, String> env = System.getenv();
-
-	System.out.println("<table>");
+    System.out.println("<table>");
         String envNames[] = new String[env.size()];
         int index = 0;
-	for (String envName : env.keySet())
+    for (String envName : env.keySet())
         {
             envNames[index] = envName;
             index++;
-	}
+    }
         Arrays.sort(envNames);
         for (int i = 0; i < env.size(); i++)
         {
@@ -97,10 +97,10 @@ class hello {
         System.out.println("</table>");
 
 
-
-	System.out.println("<h1>Form Test</h1>");
+ 
+    System.out.println("<h1>Form Test</h1>");
         System.out.println("<hr>");
-        System.out.println("<form action='getdata.cgi' method='post'>");
+        System.out.println("<form action='hello.cgi' method=Post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
         System.out.println(" <br>");
         System.out.println("<label>Password: <input type='password' name='password'></label>");
