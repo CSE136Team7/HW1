@@ -1,21 +1,23 @@
 #!/usr/bin/node
-var sys = require ('sys'),
-url = require('url'),
-http = require('http'),
-qs = require('querystring');
+var http = require('http');
+var postHTML = 
+  '<html><head><title>Post Example</title></head>' +
+  '<body>' +
+  '<form method="post">' +
+  'Input 1: <input name="input1"><br>' +
+  'Input 2: <input name="input2"><br>' +
+  '<input type="submit">' +
+  '</form>' +
+  '</body></html>';
+
 http.createServer(function (req, res) {
-    if(req.method=='POST') {
-            var body='';
-            req.on('data', function (data) {
-                body +=data;
-            });
-            req.on('end',function(){
-                var POST =  qs.parse(body);
-                console.log(POST);
-            });
-    }
-    else if(req.method=='GET') {
-        var url_parts = url.parse(req.url,true);
-        console.log(url_parts.query);
-    }
-}).listen(1337, "127.0.0.1");
+  var body = "";
+  req.on('data', function (chunk) {
+    body += chunk;
+  });
+  req.on('end', function () {
+    console.log('POSTed: ' + body);
+    res.writeHead(200);
+    res.end(postHTML);
+  });
+}).listen(8080);
