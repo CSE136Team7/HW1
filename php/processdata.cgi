@@ -15,7 +15,8 @@ echo "<!DOCTYPE html>
         }
 
         if($_SERVER['REQUEST_METHOD']=="POST") {
-          parse_str($_SERVER['QUERY_STRING']);
+          echo $HTTP_RAW_POST_DATA;
+          parse_str($HTTP_RAW_POST_DATA);
           echo $username;
           # for($j = 0; $j<$_POST["magicnum"];$j++){
           # echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
