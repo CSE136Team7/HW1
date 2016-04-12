@@ -86,8 +86,6 @@ def randomBackground()
 	return "background-color: " + bgs[num - 1] + "; color: " + txtcolor + ";"
 end
 
-printHTML()
-
 def envTables()
     puts "<h1>Environment Variables</h1>"
     ENV.sort
@@ -125,3 +123,5 @@ def envTables()
     end
     puts "</table>"
 end
+
+printHTML()
