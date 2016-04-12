@@ -5,6 +5,7 @@ var d = new Date();
 
 var bgcolorlist=["aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "white", "yellow"];
 var backgroundcolor=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
+backgroundcolor="black";
 
 if (backgroundcolor==="black") {
   console.log(
