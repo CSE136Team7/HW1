@@ -9,7 +9,7 @@
 <h1>Form Test</h1>
 <hr>
 <h3>Post Form</h3>
-<form id="postform"  method="post" action="/">
+<form id="postform"  method="post" action="processdata.cgi">
 <label>Name: <input type="text" name="username"></label>
 <br>
 <label>Password: <input type="password" name="password"></label>
@@ -22,13 +22,7 @@
 
 <script>
 
-app.use(express.bodyParser());
-
-app.post('/', function(request, response){
-    console.log(request.body.username);
-    console.log(request.body.password);
-});
-  /*function main1(){
+function main1(){
 try {
 var usernamelist = document.getElementsByName("username");
 var username = "";
@@ -50,7 +44,7 @@ catch(err) {
 //s = s * magicnum1;
 //var myWindow = window.open("", "_self");
 document.write("<h1>Hello " + username +" with a password of " + password+ "</h1></br>");
-}*/
+}
 </script>
 
 <hr>
