@@ -18,14 +18,13 @@ for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
 
-var chunk = '';
+
 /*
 process.stdin('data', function(chunk) {
  process.stdout.write('data: ' + chunk);
  data++;
 });
 */
-process.stdin.setEncoding('utf8');
 
 process.stdin.on('readable', () => {
   var chunk = process.stdin.read();
@@ -37,7 +36,5 @@ process.stdin.on('readable', () => {
 process.stdin.on('end', () => {
   process.stdout.write('end');
 });
-
-
 
 
