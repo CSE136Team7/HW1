@@ -5,11 +5,9 @@
 echo "<!DOCTYPE html>
       <html lang='en'>
       <head>
-        <title>Hello page in PHP</title>
+        <title>Environmental from PHP</title>
       </head>
       <body style='background-color:$color'>
-        <h1>Hello World from PHP @ " .date("Y/m/d"). "</h1>
-        <br>
         <br>
         <h1>Browser Variables</h1>
         <br>
