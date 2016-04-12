@@ -20,8 +20,9 @@ console.log(magicnumber  + '<br>');
 
 //console.log(a);
 var s='Hello ' + username + ' with a password of ' + password;
-//s=s*magicnumber;
+for (var i=0; i<magicnumber; i++) {
 console.log(s);
+}
 //var username = document.getElementsByName("username")[0].value;
 
 
