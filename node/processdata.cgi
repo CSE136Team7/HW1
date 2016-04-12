@@ -5,8 +5,6 @@ console.log(header);
 var obj = process.env;
  var b = obj['QUERY_STRING']; 
  
- var c = obj['CONTEXT_PREFIX'];
- console.log('context:' + c);
 
 var res = b.split("&");
 var username = res[0].split("=")[1];
