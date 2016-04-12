@@ -3,18 +3,6 @@
 var header ='Content-type: text/html\n\n';
 console.log(header);
 
-process.stdin.resume();
-process.stdin.setEncoding('utf8');
-var data = '';
-	process.stdin.on('data', function(chunk) {
-		data+=chunk;
-	});
-
-	process.stdin.on('end', function() {
-		var d = querystring.parse(data);
-		printBody(d.username, d.password, d.magicnum);
-		console.log('hello there');
-	});
 
 
 var obj = process.env;
