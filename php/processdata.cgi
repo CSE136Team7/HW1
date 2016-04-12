@@ -15,6 +15,7 @@ echo "<!DOCTYPE html>
         }
 
         if($_SERVER['REQUEST_METHOD']=="POST") {
+          echo "post method";
           echo $HTTP_RAW_POST_DATA;
           parse_str($HTTP_RAW_POST_DATA);
           echo $username;
