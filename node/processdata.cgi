@@ -2,7 +2,6 @@
 
 var header ='Content-type: text/html\n\n';
 console.log(header);
-console.log(process.env.REQUEST_METHOD);
 if (process.env.REQUEST_METHOD==='GET') {
   var obj = process.env;
    var b = obj['QUERY_STRING'];
@@ -19,7 +18,9 @@ if (process.env.REQUEST_METHOD==='GET') {
   for (var i=0; i<magicnumber; i++) {
   console.log(s);
   }
-}else{
+}
+else if(process.env.REQUEST_METHOD==='POST'){
+  console.log(process.env.REQUEST_METHOD);
 	var b = '';
 	process.stdin.on('data', function(data) {
 		b+=data;
