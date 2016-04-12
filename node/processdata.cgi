@@ -6,7 +6,7 @@ console.log(header);
 var qs = require('querystring');
 
 function (request, response) {
-    if (request.method == 'POST') {
+    if (request.method === 'POST') {
         var body = '';
 
         request.on('data', function (data) {
@@ -34,7 +34,7 @@ function (request, response) {
         for(var i = 0; i < magicNum; i++){
           console.log("Hello " + username + " with a password of " + password);
         }
-        
+
     } else {
       var obj = process.env;
        var b = obj['QUERY_STRING'];
