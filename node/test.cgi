@@ -13,7 +13,7 @@ var body =
 +'Hello world node'
 +'</title>'
 +'</head>'
-+'<body style= "background-color:lightgrey;">'
++'<body style= "background-color:'+ backgroundcolor + ';">'
 +'<h2 style="margin-bottom:20px"> Hello World from JavaScript @ ' + d + '</h2>'
 + '<hr>' 
 +'<h2 align="center">Environment Variables</h2>'
