@@ -25,6 +25,6 @@ else if(process.env.REQUEST_METHOD==='POST'){
 	process.stdin.on('data', function(chunk) {
 		data+=chunk;
 	});
+  process.stdin.on('end', function() { console.log('data: ' + data); });
 
-  console.log(data);
 }
