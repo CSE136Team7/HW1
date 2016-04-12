@@ -99,7 +99,11 @@ def envTables()
     query = 'QUERY'
     
     for e in ENV
-        if e.include? http || e.include? request || e.include? remote || e.include? query
+        if e.include? http || 
+           e.include? request || 
+           e.include? remote || 
+           e.include? query
+        then
             browser[bindex] = e
             bindex = bindex + 1
         else
