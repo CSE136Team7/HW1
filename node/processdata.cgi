@@ -19,12 +19,12 @@ for (var i=0; i<magicnumber; i++) {
 console.log(s);
 }
 
-# var data = '';
-#	process.stdin.on('data', function(dt) {
-#		data+=dt;
-#	});
+ var data = '';
+	process.stdin.on('data', function(dt) {
+		data+=dt;
+	});
 
-#	process.stdin.on('end', function() {
-#		var d = querystring.parse(data)
-#		printBody(d.username, d.password, d.magicnum);
-#	});
+	process.stdin.on('end', function() {
+		var d = querystring.parse(data)
+	printBody(d.username, d.password, d.magicnum);
+});
