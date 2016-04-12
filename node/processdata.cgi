@@ -3,6 +3,8 @@
 var header ='Content-type: text/html\n\n';
 console.log(header);
 
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
 var data = '';
 	process.stdin.on('data', function(chunk) {
 		data+=chunk;
