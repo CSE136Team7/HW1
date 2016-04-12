@@ -11,7 +11,7 @@ class hello {
     System.out.println("Content-type: text/html\n\n");
 
     //
-    // Create teh Top of the returned HTML page
+    // Create the Top of the returned HTML page
     //
     String Top = "<html>\n"
         + "<head>\n"
@@ -100,7 +100,7 @@ class hello {
  
     System.out.println("<h1>Form Test</h1>");
         System.out.println("<hr>");
-        System.out.println("<form action='hello.cgi' method=Post'>");
+        System.out.println("<form action='hello.cgi' method='post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
         System.out.println(" <br>");
         System.out.println("<label>Password: <input type='password' name='password'></label>");

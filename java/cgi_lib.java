@@ -429,6 +429,7 @@ class cgi_lib
       //
       // Print the required CGI header.
       //
+        System.out.println("Content-Type: text/html\n\n");
       System.out.println(Header());
 
       //
