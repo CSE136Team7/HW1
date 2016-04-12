@@ -8,7 +8,9 @@ echo "<!DOCTYPE html>
       </head>
       <body>";
         if(count($_GET)>0) {
+          echo "i am here";
           for($i = 0; $i<$_GET["magicnum"];$i++){
+            echo "i am there";
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
         }
         }
