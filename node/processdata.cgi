@@ -22,8 +22,8 @@ if (process.env.REQUEST_METHOD==='GET') {
 else if(process.env.REQUEST_METHOD==='POST'){
   console.log(process.env.REQUEST_METHOD);
 	var b = '';
-	process.stdin.on('data', function(data) {
-		b+=data;
+	process.stdin.on('data', function(chunk) {
+		b+=chunk;
 	});
 
   console.log(b);
