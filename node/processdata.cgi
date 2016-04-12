@@ -5,10 +5,10 @@ console.log(header + '<h1>Hello  with a password of </h1></br>');
 //console.log("Content-Type: text/html;charset=utf-8\n\n");
 var username = process.env.REQUEST_METHOD==='GET';
 var obj = process.env;
-var a = Object.getOwnPropertyNames(obj)['QUERY_STRING'];
+var a = Object.getOwnPropertyNames(obj);
 
 console.log(username);
-console.log(Object.getOwnPropertyNames(obj)['QUERY_STRING']);
+console.log(a);
 //var username = document.getElementsByName("username")[0].value;
 
 
