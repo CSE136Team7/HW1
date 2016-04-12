@@ -4,7 +4,7 @@ import cgitb, cgi
 
 def main():
         cgitb.enable()
-        print ("Content-Type: text/html;charset-utf-8")
+        print ("Content-Type: text/html;charset=utf-8")
         print ("")
         form = cgi.FieldStorage()
         try:
@@ -12,11 +12,17 @@ def main():
                 password = validateString(form.getvalue('password'))
                 magicnum1 = validateInt(form.getvalue('magicnum'))
         except ValueError:
-                print("<p>There was an error with your input</p>")
+                printHTML("<p>There was an error with your input</p>")
         else:
                 s = "<h1>Hello {} with a password of {}</h1></br>".format(username,password)
                 s = s * magicnum1
-                print(s)
+                printHTML(s)
+
+def printHTML(string):
+	print "<!doctype html>\n<html lang='en'>\n<head>\n<meta http-equiv='content-type' content=text/html; charset=utf-8 /><title>HW1 in Python</title>\n</head>"
+	print "<body >\n"
+	print string
+	print "</body>\n</html>"
 
 def validateString(string):
         if not string:
