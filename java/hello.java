@@ -95,7 +95,8 @@ class hello {
         }
         Arrays.sort(server);
         Arrays.sort(browser);
-
+        
+        System.out.println("<h1>Browser</h1>");
         System.out.println("<table>");
         for (int bi = 0; bi <= bindex; bi++)
         {
@@ -110,7 +111,7 @@ class hello {
         }
         System.out.println("</table>");
 
-  
+        System.out.println("<h1>Server</h1>");  
         System.out.println("<table>");
         for (int si = 0; si <= sindex; si++)
         {
