@@ -99,7 +99,6 @@ def envTables()
     query = "QUERY"
     
     for e in ENV.keys do
-        puts e
         if e.include? http 
             browser[bindex] = e
             bindex = bindex + 1
