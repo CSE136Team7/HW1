@@ -22,8 +22,9 @@ end
 puts magicnum
 puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
 
-for i in 0..magicnum
-puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
+while $i<$magicnum do
+	puts "<h1> Hello " + username + " with the password of " + password + "</h1>"
+	$i+=1
 end
 
 
