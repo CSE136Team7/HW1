@@ -25,15 +25,14 @@
 try {
 var usernamelist = document.getElementsByName("username");
 var username = "";
-var i;
+var i=0;
 for (i = 0; i < usernamelist.length ;i++) {
-   username += usernamelist.elements[i].value + "<br>";
+   username += usernamelist[i].value + "<br>";
 
 var passwordlist = document.getElementsByName("password");
 var password = "";
-var i;
 for (i = 0; i < passwordlist.length ;i++) {
-   password += passwordlist.elements[i].value + "<br>";
+   password += passwordlist[i].value + "<br>";
    
 var magicnum = document.getElementsByName("magicnum");
 }
