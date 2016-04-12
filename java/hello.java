@@ -75,22 +75,31 @@ class hello {
 
 
         Map<String, String> env = System.getenv();
-
-        
-        String server[] = new String[env.size()];
-        String browser[] = new String[env.size()];
         int sindex = 0, bindex = 0;
+
+        for (String envName : env.keySet() {
+            if (envName.startsWith("HTTP") || envName.startsWith("REQUEST") || envName.startsWith("REMOTE") || envName.startsWith("QUERY") || envName.startsWith("I")) {
+                bindex++;
+            }
+            else 
+                sindex++;
+        }
+        
+        String server[] = new String[sindex];
+        String browser[] = new String[bindex];
+        bindex = 0;
+        sindex = 0;
         for (String envName : env.keySet())
         {
-            if (envName.startsWith("SERVER") || envName.startsWith("REQUEST") || envName.startsWith("HTTP") || envName.startsWith("SCRIPT") || envName.startsWith("CONTEXT"))
-            {
-              server[sindex] = envName;
-              sindex++;
-            }
-            else
+            if (envName.startsWith("HTTP") || envName.startsWith("REQUEST") || envName.startsWith("REMOTE") || envName.startsWith("QUERY") || envName.startsWith("I"))
             {
               browser[bindex] = envName;
               bindex++;
+            }
+            else
+            {
+              server[sindex] = envName;
+              sindex++;
             }
         }
         Arrays.sort(server);
