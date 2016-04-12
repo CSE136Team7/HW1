@@ -13,7 +13,7 @@ if (process.env.REQUEST_METHOD==='GET') {
   var magicnumber = res[2].split("=")[1];
 
 
-  if(!username || !password || magicnumber < 0 || isNaN(magicnumber ||!magicnumber)){
+  if(!username || !password || magicnumber < 0 || isNaN(magicnumber) ||!magicnumber){
       console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body ><h1>There was an error with your input</h1></body></html>");
     }else{
       for (var i=0; i<magicnumber; i++) {
@@ -31,7 +31,7 @@ else if(process.env.REQUEST_METHOD==='POST'){
     var username = res[0].split("=")[1];
     var password = res[1].split("=")[1];
     var magicnumber = res[2].split("=")[1];
-    if(!username || !password || magicnumber < 0 || isNaN(magicnumber ||!magicnumber)){
+    if(!username || !password || magicnumber < 0 || isNaN(magicnumber) ||!magicnumber){
       console.log("<!DOCTYPE html> <html lang='en'> <head>  <title>Processdata form node</title></head><body ><h1>There was an error with your input</h1></body></html>");
       }else{
         for (var i=0; i<magicnumber; i++) {
