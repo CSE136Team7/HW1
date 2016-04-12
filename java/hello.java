@@ -75,22 +75,31 @@ class hello {
 
 
         Map<String, String> env = System.getenv();
-
-        
-        String server[] = new String[env.size()];
-        String browser[] = new String[env.size()];
         int sindex = 0, bindex = 0;
+
+        for (String envName : env.keySet()) {
+            if (envName.startsWith("HTTP") || envName.startsWith("REQUEST") || envName.startsWith("REMOTE") || envName.startsWith("QUERY") || envName.startsWith("I")) {
+                bindex++;
+            }
+            else 
+                sindex++;
+        }
+        
+        String server[] = new String[sindex];
+        String browser[] = new String[bindex];
+        bindex = 0;
+        sindex = 0;
         for (String envName : env.keySet())
         {
-            if (envName.startsWith("SERVER") || envName.startsWith("REQUEST") || envName.startsWith("HTTP") || envName.startsWith("SCRIPT") || envName.startsWith("CONTEXT"))
-            {
-              server[sindex] = envName;
-              sindex++;
-            }
-            else
+            if (envName.startsWith("HTTP") || envName.startsWith("REQUEST") || envName.startsWith("REMOTE") || envName.startsWith("QUERY") || envName.startsWith("I"))
             {
               browser[bindex] = envName;
               bindex++;
+            }
+            else
+            {
+              server[sindex] = envName;
+              sindex++;
             }
         }
         Arrays.sort(server);
@@ -98,7 +107,7 @@ class hello {
         
         System.out.println("<h1>Browser</h1>");
         System.out.println("<table>");
-        for (int bi = 0; bi <= bindex; bi++)
+        for (int bi = 0; bi < bindex; bi++)
         {
             System.out.println("<tr>");
             System.out.println("<td>");
@@ -113,7 +122,7 @@ class hello {
 
         System.out.println("<h1>Server</h1>");  
         System.out.println("<table>");
-        for (int si = 0; si <= sindex; si++)
+        for (int si = 0; si < sindex; si++)
         {
             System.out.println("<tr>");
             System.out.println("<td>");
@@ -129,17 +138,35 @@ class hello {
 
 
 
- 
-    System.out.println("<h1>Form Test</h1>");
         System.out.println("<hr>");
-        System.out.println("<form action='hello.cgi' method='post'>");
+    System.out.println("<h1>POST FORM</h1>");
+        System.out.println("<form action='getdata.cgi' method='post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
         System.out.println(" <br>");
         System.out.println("<label>Password: <input type='password' name='password'></label>");
         System.out.println("<br>");
         System.out.println("<label>Magic Number: <input type='text' name='magicnum' size='2' maxlength='2'></label>");
         System.out.println("<br>");
-        System.out.println("<label>Magic Number: <input type='text' name='magicnum2' size='2' maxlength='2'></label>");
+
+
+        System.out.println("<br>");
+        System.out.println("<input type='hidden' name='test' value='it'>");
+        System.out.println("<input type='submit' value='send'>");
+        System.out.println("</form>");
+
+        System.out.println("<hr>");
+
+        System.out.println("<h1>GET FORM</h1>");
+        System.out.println("<form action='getdata.cgi' method='get'>");
+        System.out.println("<label>Name: <input type='text' name='username'></label>");
+        System.out.println(" <br>");
+        System.out.println("<label>Password: <input type='password' name='password'></label>");
+        System.out.println("<br>");
+        System.out.println("<label>Magic Number: <input type='text' name='magicnum' size='2' maxlength='2'></label>");
+        System.out.println("<br>");
+
+
+
 
         System.out.println("<br>");
         System.out.println("<input type='hidden' name='test' value='it'>");

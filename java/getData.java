@@ -24,6 +24,23 @@ class getData {
           return new String(out);
   }
 
+public static boolean MethGet()
+  {
+     String RequestMethod = System.getProperty("cgi.request_method");
+     boolean returnVal = false;
+
+     if (RequestMethod != null)
+     {
+         if (RequestMethod.equals("GET") ||
+             RequestMethod.equals("get"))
+         {
+             returnVal=true;
+         }
+     }
+     return returnVal;
+  }
+
+
   public static void main(String args[]) {
 
     System.out.println("Content-type: text/html\n\n");
@@ -41,19 +58,24 @@ class getData {
 
     String inBuffer = "";
 
+    if (MethGet()) {
+        inBuffer = System.getProperty("cgi.query_string");
+    }
+
+   else{
+
     DataInput d = new DataInputStream(System.in);
     String line;
     try
     {
-      System.out.println("Before while");
       while(d != null && (line = d.readLine()) != null)
       {
-          System.out.println("in while");
           inBuffer = inBuffer + line;
       }
-      System.out.println("after while");
     }
     catch (IOException ignored) { }
+   }
+
 
     //
     //  Split the name value pairs at the ampersand (&)
@@ -88,7 +110,7 @@ class getData {
     int magicnum = Integer.parseInt(magicNum);
 
     for(int i = 0; i < magicnum; i++){
-      System.out.println("<h1>Hello " + username + "with a password of " + password + "</h1>");
+      System.out.println("<h1>Hello " + username + " with a password of " + password + "</h1>");
     }
 
     System.out.println("</body>\n</html>\n");

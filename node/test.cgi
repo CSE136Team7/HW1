@@ -32,7 +32,7 @@ a.forEach(function(val, idx, array) {
 console.log( '<!doctype html>'
 + '<hr style="margin-top:20px">'
 +'<h3>Post Form</h3>'
-+'<form id="postform" action="processdata.cgi" method="post">'
++'<form id="postform" action="processdata.cgi" method="post" name="post">'
 +'<label>Name: <input type="text" name="username"></label>'
 +'<br>'
 +'<label>Password: <input type="password" name="password"></label>'
