@@ -7,8 +7,9 @@ echo "<!DOCTYPE html>
         <title>process data in PHP</title>
       </head>
       <body>";
-        echo "dfsd".$_GET['username']."fsd".$_GET[username]."dfsdf".$_GET["username"];;
+        echo $_SERVER['QUERY_STRING'];
         if(strcmp($_SERVER['REQUEST_METHOD'],"GET")==0){
+          echo "tjos";
           for($i = 0; $i<$_GET["magicnum"];$i++){
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
           }
