@@ -1,11 +1,11 @@
 #!/usr/bin/ruby
 
-puts "Content-type: text/html\n\n"
-puts "<!doctype html>"
-puts "<head>"
-puts "<meta charset='UTF-8'>"
-puts "</head>"
-puts "<body>"
+#puts "Content-type: text/html\n\n"
+#puts "<!doctype html>"
+#puts "<head>"
+#puts "<meta charset='UTF-8'>"
+#puts "</head>"
+#puts "<body>"
 
 # puts "<html> <h1> Enviroment Variables</h1> </html>"
 #
