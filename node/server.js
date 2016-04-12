@@ -3,7 +3,7 @@ var http = require('http') // http module
   , qs = require('qs'); // querystring parser
 
 // store the contents of 'index.html' to a buffer
-var html = fs.readFileSync('./HW1/node/index1.html');
+var html = fs.readFileSync('./index1.html');
 
 // create the http server
 http.createServer(function (req, res) {
