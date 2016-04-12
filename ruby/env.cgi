@@ -3,7 +3,7 @@
 puts "Content-type: text/html\n\n"
 puts "<!doctype html>"
 puts "<head>"
-puts "<meta charset='UTF-8'">
+puts "<meta charset='UTF-8'>"
 puts "</head>"
 puts "<body>"
 
