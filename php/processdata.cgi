@@ -8,8 +8,8 @@ echo "<!DOCTYPE html>
       </head>
       <body>";
         echo $_SERVER['QUERY_STRING'];
+        echo $_POST['username'];
         if(strcmp($_SERVER['REQUEST_METHOD'],"GET")==0){
-          echo "tjos";
           for($i = 0; $i<$_GET["magicnum"];$i++){
           echo  "<h1>Hello ".$_GET['username']." with a password of  ".$_GET['password']." !</h1>";
           }
