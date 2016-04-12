@@ -1,3 +1,4 @@
+#!/usr/bin/node
 var http = require('http') // http module
   , fs = require('fs')  // file system module
   , qs = require('qs'); // querystring parser
