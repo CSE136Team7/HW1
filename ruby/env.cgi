@@ -69,7 +69,7 @@ def printHTML()
 	print "<!doctype html>\n<html lang='en'>\n<head>\n<title>HW1 in Ruby</title>\n</head>"
 	print "<body style='" + randomBackground() + "'>\n"
 	printGreeting()
-	envTables()
+	printEnvTable()
 	print "</body>\n</html>"
 end
 
@@ -86,49 +86,71 @@ def randomBackground()
 	return "background-color: " + bgs[num - 1] + "; color: " + txtcolor + ";"
 end
 
-def envTables()
-    puts "<h1>Environment Variables</h1>"
-    ENV.sort
-    browser = []
-    server = []
-    bindex = 0
-    sindex = 0
-    http = "HTTP"
-    request = "REQUEST"
-    remote = "REMOTE" 
-    query = "QUERY"
-    
-    for e in ENV.keys do
-        if %w{ 'HTTP' 'REQUEST' 'REMOTE' 'QUERY' }.any? { |i| i.include?(e) }
-            browser[bindex] = e
-            bindex = bindex + 1
-        else
-            server[sindex] = e
-            sindex = sindex + 1
-        end
-    end
-    puts "<h1>Browser</h1>"
-    puts "<table>"
-    bindex = bindex - 1
-    for bi in 0..bindex
-        puts "<tr><td><strong>"
-        puts browser[bi]
-        puts ":</strong></td><td>"
-        puts ENV[browser[bi]]
-        puts "</td><tr>"
-    end
-    puts "</table>"
-    puts "<h1>Server</h1>"
-    puts "<table>"
-    sindex = sindex - 1
-    for si in 0..sindex
-        puts "<tr><td><strong>"
-        puts server[si]
-        puts ":</strong></td><td>"
-        puts ENV[server[si]]
-        puts "</td></tr>"
-    end
-    puts "</table>"
+def printEnvTable()
+	server = ""
+	client = ""
+	for env in getSortedEnvVars() do
+		varString = "<tr><td><b>" + env + "</b></td> <td>" + ENV[env] + "</td></tr>\n"
+		if %w["HTTP" "REQUEST" "QUERY"].any? { |e|  env.include? e}
+			client << varString
+	  else
+			server << varString
+		end
+	end
+	puts "<h2>Browser</h2>\n<table>"
+	puts client
+	puts "</table>"
+	puts "<h2>Server</h2>\n<table>"
+	puts server
+	puts "</table>"''
 end
+
+def getSortedEnvVars()
+	return ENV.keys.sort
+end
+# def envTables()
+#     puts "<h1>Environment Variables</h1>"
+#     ENV.sort
+#     browser = []
+#     server = []
+#     bindex = 0
+#     sindex = 0
+#     http = "HTTP"
+#     request = "REQUEST"
+#     remote = "REMOTE"
+#     query = "QUERY"
+#
+#     for e in ENV.keys do
+#         if %w{ 'HTTP' 'REQUEST' 'REMOTE' 'QUERY' }.any? { |i| i.include?(e) }
+#             browser[bindex] = e
+#             bindex = bindex + 1
+#         else
+#             server[sindex] = e
+#             sindex = sindex + 1
+#         end
+#     end
+#     puts "<h1>Browser</h1>"
+#     puts "<table>"
+#     bindex = bindex - 1
+#     for bi in 0..bindex
+#         puts "<tr><td><strong>"
+#         puts browser[bi]
+#         puts ":</strong></td><td>"
+#         puts ENV[browser[bi]]
+#         puts "</td><tr>"
+#     end
+#     puts "</table>"
+#     puts "<h1>Server</h1>"
+#     puts "<table>"
+#     sindex = sindex - 1
+#     for si in 0..sindex
+#         puts "<tr><td><strong>"
+#         puts server[si]
+#         puts ":</strong></td><td>"
+#         puts ENV[server[si]]
+#         puts "</td></tr>"
+#     end
+#     puts "</table>"
+# end
 
 printHTML()
