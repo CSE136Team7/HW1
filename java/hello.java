@@ -5,15 +5,15 @@ class hello {
 
   public static void main (String args[])
   {
-	//
-	// Print the required cgi header
-	//
-	System.out.println("Content-type: text/html\n\n");
+    //
+    // Print the required cgi header
+    //
+    System.out.println("Content-Type: text/html\n\n");
 
-	//
-	// Create teh Top of the returned HTML page
-	//
-	String Top = "<html>\n"
+    //
+    // Create the Top of the returned HTML page
+    //
+    String Top = "<html>\n"
         + "<head>\n"
         + "<title>\n"
         + "java src"
@@ -24,7 +24,7 @@ class hello {
         // Generate a number between 1 and 16
         Random rand = new Random();
         int r = rand.nextInt(16);
-	switch(r){
+    switch(r){
           case 0:
             Top += "body { background: aqua; color: black; }\n"; break;
           case 1:
@@ -68,39 +68,70 @@ class hello {
         + "<body>\n";
           System.out.println(Top);
           System.out.println("Hello World from Java @" + new Date());
-	
+    
 
-	System.out.println("<hr>");
+    System.out.println("<hr>");
 
-	Map<String, String> env = System.getenv();
 
-	System.out.println("<table>");
-        String envNames[] = new String[env.size()];
-        int index = 0;
-	for (String envName : env.keySet())
+
+        Map<String, String> env = System.getenv();
+
+        
+        String server[] = new String[env.size()];
+        String browser[] = new String[env.size()];
+        int sindex = 0, bindex = 0;
+        for (String envName : env.keySet())
         {
-            envNames[index] = envName;
-            index++;
-	}
-        Arrays.sort(envNames);
-        for (int i = 0; i < env.size(); i++)
+            if (envName.startsWith("SERVER") || envName.startsWith("REQUEST") || envName.startsWith("HTTP") || envName.startsWith("SCRIPT") || envName.startsWith("CONTEXT"))
+            {
+              server[sindex] = envName;
+              sindex++;
+            }
+            else
+            {
+              browser[bindex] = envName;
+              bindex++;
+            }
+        }
+        Arrays.sort(server);
+        Arrays.sort(browser);
+
+        System.out.println("<table>");
+        for (int bi = 0; bi <= bindex; bi++)
         {
             System.out.println("<tr>");
             System.out.println("<td>");
-            System.out.format("<strong>%s</strong>", envNames[i]);
+            System.out.format("<strong>%s</strong>", browser[bi]);
             System.out.println("</td>");
             System.out.println("<td>");
-            System.out.format("%s%n", env.get(envNames[i]));
+            System.out.format("%s%n", env.get(browser[bi]));
+            System.out.println("</td>");
+            System.out.println("</tr>");
+        }
+        System.out.println("</table>");
+
+  
+        System.out.println("<table>");
+        for (int si = 0; si <= sindex; si++)
+        {
+            System.out.println("<tr>");
+            System.out.println("<td>");
+            System.out.format("<strong>%s</strong>", server[si]);
+            System.out.println("</td>");
+            System.out.println("<td>");
+            System.out.format("%s%n", env.get(server[si]));
             System.out.println("</td>");
             System.out.println("</tr>");
         }
         System.out.println("</table>");
 
 
+
+
  
-	System.out.println("<h1>Form Test</h1>");
+    System.out.println("<h1>Form Test</h1>");
         System.out.println("<hr>");
-        System.out.println("<form action='hello.cgi' method=Post'>");
+        System.out.println("<form action='hello.cgi' method='post'>");
         System.out.println("<label>Name: <input type='text' name='username'></label>");
         System.out.println(" <br>");
         System.out.println("<label>Password: <input type='password' name='password'></label>");
