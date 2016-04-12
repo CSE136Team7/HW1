@@ -7,7 +7,7 @@ echo "<!DOCTYPE html>
         <title>process data in PHP</title>
       </head>
       <body>
-        <h1>Hello ".$_GET["username"]." with a password of  ".$_GET["password"]." !</h1>
+        <h1>Hello ".$_GET["username"]." with a password of  ".$_GET["password"] $_GET["magicnum"]." !</h1>
       </body>
       </html>";
 ?>
