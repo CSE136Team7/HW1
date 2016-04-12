@@ -1,20 +1,21 @@
 import java.util.*;
 import java.io.*;
 
-class hello {
+class helloworld {
 
   public static void main (String args[])
   {
     //
     // Print the required cgi header
     //
-    System.out.println("Content-type: text/html\n\n");
+    System.out.println("Content-Type: text/html\n\n");
 
     //
-    // Create teh Top of the returned HTML page
+    // Create the Top of the returned HTML page
     //
-    String Top = "<html>\n"
+    String Top = "<!doctype html>\n"
         + "<head>\n"
+        + "<meta charset='UTF-8'>\n"
         + "<title>\n"
         + "java src"
         + "\n"
@@ -69,50 +70,6 @@ class hello {
           System.out.println(Top);
           System.out.println("Hello World from Java @" + new Date());
     
-
-    System.out.println("<hr>");
-
-    Map<String, String> env = System.getenv();
-
-    System.out.println("<table>");
-        String envNames[] = new String[env.size()];
-        int index = 0;
-    for (String envName : env.keySet())
-        {
-            envNames[index] = envName;
-            index++;
-    }
-        Arrays.sort(envNames);
-        for (int i = 0; i < env.size(); i++)
-        {
-            System.out.println("<tr>");
-            System.out.println("<td>");
-            System.out.format("<strong>%s</strong>", envNames[i]);
-            System.out.println("</td>");
-            System.out.println("<td>");
-            System.out.format("%s%n", env.get(envNames[i]));
-            System.out.println("</td>");
-            System.out.println("</tr>");
-        }
-        System.out.println("</table>");
-
-
- 
-    System.out.println("<h1>Form Test</h1>");
-        System.out.println("<hr>");
-        System.out.println("<form action='hello.cgi' method=Post'>");
-        System.out.println("<label>Name: <input type='text' name='username'></label>");
-        System.out.println(" <br>");
-        System.out.println("<label>Password: <input type='password' name='password'></label>");
-        System.out.println("<br>");
-        System.out.println("<label>Magic Number: <input type='text' name='magicnum' size='2' maxlength='2'></label>");
-        System.out.println("<br>");
-        System.out.println("<label>Magic Number: <input type='text' name='magicnum2' size='2' maxlength='2'></label>");
-
-        System.out.println("<br>");
-        System.out.println("<input type='hidden' name='test' value='it'>");
-        System.out.println("<input type='submit' value='send'>");
-        System.out.println("</form>");
 
 
 
