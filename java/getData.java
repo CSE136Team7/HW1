@@ -114,9 +114,9 @@ public static boolean MethGet()
         System.out.println("Generic error message");
         err = -1;
     }
-
+    int magicnum = -999;
 try{
-    int magicnum = Integer.parseInt(magicNum);
+    magicnum = Integer.parseInt(magicNum);
 }
 catch(Exception e){
     err = -2;
