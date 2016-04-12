@@ -15,3 +15,5 @@ puts username
 puts password
 puts magicnum
 
+puts "Hello " + username + " with the password of " + password
+
