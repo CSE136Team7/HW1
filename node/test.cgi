@@ -80,7 +80,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 pp.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); 
-app.post('/test-page', function(req, res) {
+app.post('/HW1/node/userlogin', function(req, res) {
     var name = req.body.name,
         color = req.body.color;
     // ...
