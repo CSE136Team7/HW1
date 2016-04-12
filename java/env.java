@@ -23,7 +23,6 @@ class env {
         + "</head>\n"
         + "<body>\n";
           System.out.println(Top);
-          System.out.println("Hello World from Java @" + new Date());
     
 
     System.out.println("<hr>");
