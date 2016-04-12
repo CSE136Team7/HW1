@@ -62,12 +62,27 @@ console.log( '<!doctype html>'
 var postHTML = 
   '<html><head><title>Post Example</title></head>' +
   '<body>' +
-  '<form method="post" action="/">' +
-  '<input type="text" name="user">' +
-  '<input type="text" name="user1[email]">' +
-  '<input type="submit" value="Submit">' +
-  '</form>' +
-  '</body></html>';
+  '<form id="loginformA" action="userlogin" method="post">' 
+  +'<div>'
+  + '<label for="email">Email: </label>'
+  + '<input type="text" id="email" name="email"></input>'
+  + '</div>'
++ '<input type="submit" value="Submit"></input>'
+  + '</form>' 
+ + '</body></html>';
 
 console.log(postHTML);
+
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+pp.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); 
+app.post('/test-page', function(req, res) {
+    var name = req.body.name,
+        color = req.body.color;
+    // ...
+});
 
