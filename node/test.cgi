@@ -70,7 +70,6 @@ var postHTML =
   '</form>' +
   '</body></html>';
 
-console.log(postHTML);
 
 http.createServer(function (req, res) {
   var body = "";
