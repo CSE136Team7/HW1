@@ -63,18 +63,32 @@ var postHTML =
   '<html><head><title>Post Example</title></head>' +
   '<body>' +
   '<form method="post" action="/">' +
-  '<input type="text" name="user[name]">' +
-  '<input type="text" name="user[email]">' +
+  '<input type="text" name="user">' +
+  '<input type="text" name="user1[email]">' +
   '<input type="submit" value="Submit">' +
   '</form>' +
   '</body></html>';
 
 console.log(postHTML);
-var express = require('express')
+var qs = require('querystring');
 
-app.use(express.bodyParser());
+function (request, response) {
+    if (request.method == 'POST') {
+        var body = '';
 
-app.post('/', function(request, response){
-    console.log(request.body.user.name);
-    console.log(request.body.user.email);
-});
+        request.on('data', function (data) {
+            body += data;
+
+            // Too much POST data, kill the connection!
+            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
+            if (body.length > 1e6)
+                request.connection.destroy();
+        });
+
+        request.on('end', function () {
+            var post = qs.parse(body);
+            // use post['blah'], etc.
+        });
+    }
+}
+console.log(post.user);
