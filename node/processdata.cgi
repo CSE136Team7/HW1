@@ -3,40 +3,16 @@
 var header ='Content-type: text/html\n\n';
 console.log(header);
 
+var data = '';
+	process.stdin.on('data', function(chunk) {
+		data+=chunk;
+	});
 
-var ReadableStream = Object.getPrototypeOf(process.stdin);
-console.log('readable:' + ReadableStream);
-
-ReadableStream.read = function(cb) {
-  console.log('helloG');
-    this.on('data', function(buf) {
-        cb(null, buf);
-        console.log('hello');
-    });
-
-    this.on('error', function(err) {
-        cb(err, null);  
-        console.log('hello');
-    });
-
-    this.on('end', function() {
-        cb(null, null);
-        console.log('hello');
-    });
-
-    this.on('close', function() {
-      console.log('hello');
-        cb(new Error("Stream closed"), null);
-    });
-};
-
-
-
-
-
-process.stdin.on('end', function() {
-  process.stdout.write('end');
-});
+	process.stdin.on('end', function() {
+		var d = querystring.parse(data);
+		console.log(d.username + d.password + d.magicnum);
+		console.log('hello there');
+	});
 
 
 var obj = process.env;
