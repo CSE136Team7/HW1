@@ -8,7 +8,6 @@ echo "<!DOCTYPE html>
       </head>
       <body>
         <h1>Hello ".$_GET["username"]." with a password of  ".$_GET["password"]." !</h1>
-        <h1>Hello ".$_POST["username"]." with a password of  ".$_POST["password"]." !</h1>
       </body>
       </html>";
 ?>
