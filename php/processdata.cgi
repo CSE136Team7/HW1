@@ -15,10 +15,10 @@ echo "<!DOCTYPE html>
         }
 
         if($_SERVER['REQUEST_METHOD']=="POST") {
-          $f = fgets(STDIN);
-          # while($f = fgets(STDIN)){
-          #     $string
-          # }
+          while($f = fgets(STDIN)){
+            $string=  $f;
+          }
+          echo $string;
           # for($j = 0; $j<$_POST["magicnum"];$j++){
           # echo "<h1>Hello ".$_POST['username']." with a password of  ".$_POST['password']." !</h1>";
           # }
